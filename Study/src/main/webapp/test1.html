@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <!--script标签要完整的结尾-->
+    <script type="text/javascript" src="/js/jquery-3.2.1.js" ></script>
+    <script type="text/javascript">
+        function test() {
+            $.ajax({
+                url:"/greeting",
+                success:function (data) {
+                    console.log(data.id)
+                }
+            })
+        }
+       /*     $(function () {
+                var x = new dataFilter()
+                var temp
+
+
+                Object.defineProperty(x,'name',{
+                    set:function (value) {
+                        temp = value
+                        console.log("书名是"+temp)
+                    },
+                    get:function () {
+                        return '《'+temp+'》'
+                    }
+                })
+                x.name='123'
+                x.Book = {'1':'2'}
+                console.log(x.Book)
+                console.log(x.name)
+
+                /!*var a = new A()
+
+                a.name = "abg"
+                a.age = "18"
+                console.log(a.getName())*!/
+            })
+        function A (){
+            var name
+            var age
+
+        }
+        A.prototype={
+            getName:function () {
+                return this.name
+            }
+        }
+        function dataFilter(){
+            var Book= {}
+            var name = '123'
+        }
+*/
+        //遍历对象
+        function objectTraversal() {
+            var arr = {
+                data1:{
+                    prop1:"1"
+                },
+                data2:{
+                    prop2:"2"
+                }
+            }
+            console.log(typeof arr)
+            arr.forEach(function (t) {
+                console.log(arr[t])
+            })
+        }
+    </script>
+</head>
+<body>
+    study
+    <button onclick="test();">button</button>
+    <div id="div1">
+        div1
+        <span id="span1">
+            span1
+            <span id="span2">span2</span>
+            <span id="span3">span3</span>
+        </span>
+    </div>
+
+</body>
+</html>
