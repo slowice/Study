@@ -17,12 +17,13 @@ import java.util.Set;
 
 public class Test {
     public static void main(String[] args) throws Exception {
-        File otherBank  = new File("E://otherBank.txt");
+        /*File otherBank  = new File("E://otherBank.txt");
         String logs = "执行了他行扫描";
         OutputStream outputStream = new FileOutputStream(otherBank);
         OutputStreamWriter outputStreamWriter = new OutputStreamWriter(outputStream);
         outputStreamWriter.write(logs);
-        outputStreamWriter.close();
+        outputStreamWriter.close();*/
+        test2();
     }
 
     public void test(){
@@ -68,5 +69,13 @@ public class Test {
         System.out.println(f.exists());
         System.out.println(f2.exists());
         System.out.println(s2.name);
+    }
+
+    private static void test2(){
+        int[] arr = new int[2];
+        Object o = arr[3];
+        if(o instanceof ArrayIndexOutOfBoundsException){
+            System.out.println("出异常了");
+        }
     }
 }

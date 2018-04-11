@@ -1,5 +1,6 @@
 package hello.aop;
 
+import hello.aop.target_object.annotation_test.AdminOnly;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -7,13 +8,14 @@ import org.springframework.stereotype.Service;
 public class ProductService {
     @Autowired
     private AuthService authService;
+
+    @AdminOnly
     public void insert(Product product){
-        //authService.checkAccess();
         System.out.println("insert Product");
     }
+
     @AdminOnly
     public void delete(Long id){
-        //authService.checkAccess();
         System.out.println("delete Product");
     }
 }

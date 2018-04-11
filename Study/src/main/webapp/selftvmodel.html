@@ -43,10 +43,10 @@
         book2:{
             name:'颈椎病康复指南'
         }
-    }
+    };
     function defineReactive(data,key,val) {
         observe(val);
-        var dep = new Dep()
+        var dep = new Dep();
         Object.defineProperty(data,key,{
             enumerable:true,
             configurable:true,
@@ -60,13 +60,13 @@
                 if (val === newVal) {
                     return;
                 }
-                console.log('值更新')
-                val = newVal
+                console.log('值更新');
+                val = newVal;
                 dep.notify();
             }
         })
     }
-    Dep.target=null
+    Dep.target=null;
     function observe(data) {
         // 对data的类型判断
         if(!data || typeof data !== 'object'){
@@ -89,11 +89,11 @@
                 t.update()
             })
         }
-    }
+    };
     function Watcher(vm,exp,cb) {
-        this.cb = cb
-        this.vm = vm
-        this.exp = exp
+        this.cb = cb;
+        this.vm = vm;
+        this.exp = exp;
         //第二次
         this.value = this.get()
     }
@@ -103,41 +103,41 @@
         },
         run: function () {
             // 第三次get
-            var value = this.vm.data[this.exp]
-            var oldValue = this.value
+            var value = this.vm.data[this.exp];
+            var oldValue = this.value;
             if(value !== oldValue){
-                this.value = value
+                this.value = value;
                 this.cb.call(this.vm,value,oldValue)
             }
         },
         //watcher初始化的时候会调用一次
         get: function () {
             //这个this是watcher对象
-            Dep.target = this
-            var value = this.vm.data[this.exp]
-            Dep.target = null
+            Dep.target = this;
+            var value = this.vm.data[this.exp];
+            Dep.target = null;
             return value
         }
-    }
+    };
     function SelfVue (data,el,exp) {
-        this.data = data
-        var self = this
+        this.data = data;
+        var self = this;
         Object.keys(data).forEach(function (key) {
             self.proxyKeys(key)
-        })
-        observe(this.data)
+        });
+        observe(this.data);
         //第一次get
         //el.innerHTML = this.data[exp]
-        $(el).val(this.data[exp])
+        $(el).val(this.data[exp]);
         new Watcher(this, exp, function (value) {
            // el.innerHTML = value
             $(el).val(value)
-        })
+        });
         return this
     }
     SelfVue.prototype = {
         proxyKeys: function (key) {
-            var self = this
+            var self = this;
             Object.defineProperty(this,key,{
                 enumerable:true,
                 configurable:true,
@@ -149,24 +149,24 @@
                 }
             })
         }
-    }
+    };
     var data = {
         name: 'hello world'
-    }
-    var ele = document.querySelector('#name')
-    var selfVue = new SelfVue(data, ele, 'name')
+    };
+    var ele = document.querySelector('#name');
+    var selfVue = new SelfVue(data, ele, 'name');
     window.setTimeout(function () {
         selfVue.name = 'canfoo'
-    },2000)
+    },2000);
 
     function test(){
-        data['name'] = 123
+        data['name'] = 123;
         console.log(data)
     }
 
     $(function () {
         $('#name').bind('input propertychange', function(event) {
-            var newVal = $(event.target).val()
+            var newVal = $(event.target).val();
             selfVue.name = newVal
         });
     })

@@ -12,7 +12,7 @@
        http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
 
-	<import resource="/applicationContext-2.xml"></import>
+	<import resource="/applicationContext-ioc.xml"></import>
 	<bean id="hehe" class="hello.entity.Student"></bean>
-	<bean id="initTest" class="hello.bean.Foo_init" init-method="init"></bean>
+	<bean id="initTest" class="hello.ioc.bean.Foo_init" init-method="init"></bean>
 </beans>

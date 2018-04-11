@@ -7,11 +7,7 @@ public class TestMain {
         String requestType = request.getHeader("X-Requested-With");
         if (requestType != null && requestType.equals("XMLHttpRequest")) {
             return true;
-        } else if("XMLHttpRequest".equals(request.getParameter("X-Requested-With"))){
-            return true;
-        }else {
-            return false;
-        }
+        } else return "XMLHttpRequest".equals(request.getParameter("X-Requested-With"));
     }
 
     public static void main(String[] args) {

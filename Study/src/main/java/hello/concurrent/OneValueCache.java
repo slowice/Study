@@ -7,7 +7,7 @@ public class OneValueCache {
     private final Integer[] lastFactors;
 
     public OneValueCache(Integer i,Integer[] factors){
-            lastNumber = i==null?null:i;
+            lastNumber = i;
             lastFactors = factors==null?null:Arrays.copyOf(factors,factors.length);
     }
 
