@@ -1,6 +1,6 @@
 package hello.entity;
 
-public class User implements java.io.Serializable{
+public class User extends RandomObj implements java.io.Serializable{
     private static final long serialVersionUID = 1L;
     private Integer id;
     private String name;
@@ -19,5 +19,13 @@ public class User implements java.io.Serializable{
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
     }
 }

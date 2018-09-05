@@ -1,5 +1,8 @@
 package hello.temp;
 
+import hello.util.LogUtil;
+import hello.util.SpringUtil;
+import hello.util.StringUtil;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;
 
@@ -12,7 +15,7 @@ public class TestServlet extends HttpServlet{
 
     @Override
     public void init(){
-        System.out.println("init");
+        System.out.println(LogUtil.formatLog("servlet TestServlet init"));
     }
 
     @Override

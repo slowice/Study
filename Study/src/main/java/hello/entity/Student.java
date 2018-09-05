@@ -1,22 +1,19 @@
 package hello.entity;
 
-public class Student {
-    String id = "123";
-    String name = "xiaowang";
+import java.io.Serializable;
 
-    public String getId() {
-        return id;
-    }
+public class Student implements Serializable{
 
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
+    private  String name;
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                '}';
     }
 }

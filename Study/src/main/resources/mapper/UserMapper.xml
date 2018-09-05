@@ -5,8 +5,8 @@
 
     <resultMap id="BaseResultMap" type="hello.entity.User" >
         <id column="id" property="id" jdbcType="INTEGER" />
-        <!--左边对应sql，右边对应类属性，可以都不匹配，但是如果左边匹配了，右边一定要匹配-->
-        <result column="first_name" property="firstName" jdbcType="VARCHAR" />
+        <!--左边对应表的字段名，右边对应类属性名，可以都不存在，但是如果左边匹配了，右边一定要匹配-->
+        <result column="name" property="name" jdbcType="VARCHAR" />
     </resultMap>
 
     <sql id="Base_Column_List" >
@@ -22,15 +22,26 @@
     <select id="selectOneForUpdate" resultMap="BaseResultMap"  >
         SELECT
         <include refid="Base_Column_List" />
-
         FROM user
         where id = #{id}
         for UPDATE
     </select>
 
     <insert id="insert">
-       INSERT INTO user (id,name) VALUES (${id},#{name})
+       INSERT INTO user (id,name) VALUES (#{id},#{name})
     </insert>
+
+    <delete id="delete">
+        DELETE FROM user where id = #{id}
+    </delete>
+
+    <select id="select" resultMap="BaseResultMap">
+        select * from user where id = #{id}
+    </select>
+
+    <update id="update">
+        UPDATE  user SET name = #{name} WHERE id = #{id}
+    </update>
 
     <select id="selectForUpdate" resultMap="BaseResultMap">
         SELECT * FROM USER FOR UPDATE

@@ -20,7 +20,7 @@ import java.net.URLEncoder;
 import java.util.*;
 
 
-@RequestMapping("/test")
+
 public class TestController extends MultiActionController{
 
 

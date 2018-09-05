@@ -1,7 +1,5 @@
 package hello.service;
 
-import hello.concurrent.A;
-import hello.concurrent.B;
 import hello.dao.UserDao;
 import hello.entity.User;
 import hello.util.SpringUtil;
@@ -11,10 +9,6 @@ import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.TransactionStatus;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.support.DefaultTransactionDefinition;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
 
 @Service
 public class UserServiceImpl implements UserService{
@@ -84,4 +78,26 @@ public class UserServiceImpl implements UserService{
             userDao.insert(user);
         }
     }
+
+    @Override
+    public void insert(User user) {
+        userDao.insert(user);
+    }
+
+    @Override
+    public void delete(User user) {
+        userDao.delete(user);
+    }
+
+    @Override
+    public User select(Integer id) {
+        User user = userDao.select(id);
+        return user;
+    }
+
+    @Override
+    public void update(User user) {
+        userDao.update(user);
+    }
+
 }

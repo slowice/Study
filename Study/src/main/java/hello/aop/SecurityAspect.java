@@ -45,9 +45,9 @@ public class SecurityAspect extends TestUtils{
     }
 
     //匹配以Test结尾的bean
-    @Pointcut("bean(*Test)")
+   // @Pointcut("bean(*Test)")
     public void beanTest(){}
-    @Before("beanTest()")
+    //@Before("beanTest()")
     public void check5(){
         System.out.println("aop_bean匹配,匹配以Test结尾的BEAN");
     }

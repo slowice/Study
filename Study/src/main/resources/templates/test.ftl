@@ -13,7 +13,6 @@
         });
 
         function dataFilter(){
-
             var Book = {};
             var name = '';
             Object.defineProperty(Book,'name',{
@@ -27,10 +26,18 @@
             });
             Book.name = '腰椎间盘突出'
         }
+
+        function testHref(){
+            window.location = "https://www.baidu.com";
+        }
     </script>
 </head>
 <body>
+    this is test.ftl  123
+    <span><button onclick="window.location.href='https://www.baidu.com'" ></button></span>
 
-124
+    <span><a href="/www.baidu.com">hehe</a></span>
+
+    <div><button onclick="testHref()">test</button></div>
 </body>
 </html>
