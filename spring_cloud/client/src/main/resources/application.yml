@@ -1,0 +1,18 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:8761/eureka/
+  #instance:
+      # 10s未收到心跳，剔除instance 要比心跳时间大
+      #lease-expiration-duration-in-seconds: 6
+      # 心跳时间
+      #lease-renewal-interval-in-seconds: 3
+      #prefer-ip-address: false
+      #ip-address: 127.0.0.1
+      #hostname: localhost
+      #instance-id: ${spring.cloud.client.hostname}:${spring.application.name}${random.int}:${server.port}
+#---------------------------------------------------------------------------------
+
+spring:
+  application:
+    name: client123
