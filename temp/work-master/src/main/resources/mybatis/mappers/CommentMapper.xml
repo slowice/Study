@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lanhu.work.mapper.CommentMapper" >
+
+    <resultMap id="BaseResultMap" type="com.lanhu.work.pojo.Comment" >
+        <id column="comment_id" property="commentId" jdbcType="BIGINT" />
+        <result column="comment_commentid" property="commentCommentid" jdbcType="BIGINT" />
+        <result column="comment_content" property="commentContent" jdbcType="VARCHAR" />
+        <result column="comment_picture" property="commentPicture" jdbcType="VARCHAR" />
+        <result column="comment_time" property="commentTime" jdbcType="TIMESTAMP" />
+        <result column="comment_type" property="commentType" jdbcType="INTEGER" />
+        <result column="comment_user_id" property="commentUserId" jdbcType="BIGINT" />
+        <result column="comment_user_name" property="commentUserName" jdbcType="VARCHAR" />
+        <result column="comment_points" property="commentPoints" jdbcType="INTEGER" />
+        <result column="comment_category_id" property="commentCategoryId" jdbcType="BIGINT" />
+        <result column="comment_topic_id" property="commentTopicId" jdbcType="BIGINT" />
+        <result column="comment_state" property="commentState" jdbcType="INTEGER" />
+        <result column="comment_audit_by" property="commentAuditBy" jdbcType="BIGINT" />
+        <result column="comment_audit_time" property="commentAuditTime" jdbcType="TIMESTAMP" />
+        <result column="comment_remark" property="commentRemark" jdbcType="VARCHAR" />
+    </resultMap>
+
+    <sql id="Base_Column_List" >
+        comment_id, comment_commentid, comment_content, comment_picture, comment_time, comment_type, 
+        comment_user_id, comment_user_name, comment_points, comment_category_id, comment_topic_id, 
+        comment_state, comment_audit_by, comment_audit_time, comment_remark
+    </sql>
+
+    <select id="findById" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+        select 
+        <include refid="Base_Column_List" />
+        from comment
+        where comment_id = #{commentId,jdbcType=BIGINT}
+    </select>
+    
+	<select id="listPage" resultMap="BaseResultMap" parameterType="java.util.Map" >
+	    select 
+	    <include refid="Base_Column_List" />
+	    from comment
+	      where 1=1
+	      <if test="commentState != null" >
+	               AND comment_state = #{commentState}
+	      </if>
+	      <if test="commentContent != null" >
+	            AND comment_content  like CONCAT('%', #{commentContent}, '%')
+	      </if>
+	       <if test="commentTopicId != null" >
+	               AND comment_topic_id = #{commentTopicId}
+	       </if>
+	       <if test="commentCommentid != null" >
+	               AND comment_commentid = #{commentCommentid}
+	       </if>
+	   order by comment_time desc 
+	</select>
+
+    <insert id="insert" parameterType="com.lanhu.work.pojo.Comment" >
+        insert into comment (comment_id, comment_commentid, comment_content, 
+            comment_picture, comment_time, comment_type, 
+            comment_user_id, comment_user_name, comment_points, 
+            comment_category_id, comment_topic_id, comment_state
+            )
+        values (#{commentId,jdbcType=BIGINT}, #{commentCommentid,jdbcType=BIGINT}, #{commentContent,jdbcType=VARCHAR}, 
+            #{commentPicture,jdbcType=VARCHAR}, now(), #{commentType,jdbcType=INTEGER}, 
+            #{commentUserId,jdbcType=BIGINT}, #{commentUserName,jdbcType=VARCHAR}, #{commentPoints,jdbcType=INTEGER}, 
+            #{commentCategoryId,jdbcType=BIGINT}, #{commentTopicId,jdbcType=BIGINT}, #{commentState,jdbcType=INTEGER}
+            )
+    </insert>
+
+
+    <update id="update" parameterType="com.lanhu.work.pojo.Comment" >
+        update comment
+        <set >
+            1=1
+            <if test="commentContent != null" >
+                ,comment_content = #{commentContent,jdbcType=VARCHAR}
+            </if>
+            <if test="commentType != null" >
+                ,comment_type = #{commentType,jdbcType=INTEGER}
+            </if>
+            <if test="commentUserId != null" >
+                ,comment_user_id = #{commentUserId,jdbcType=BIGINT}
+            </if>
+            <if test="commentUserName != null" >
+                ,comment_user_name = #{commentUserName,jdbcType=VARCHAR}
+            </if>
+            <if test="commentPoints != null" >
+                ,comment_points = #{commentPoints,jdbcType=INTEGER}
+            </if>
+            <if test="commentState != null" >
+               , comment_state = #{commentState,jdbcType=INTEGER}
+            </if>
+            <if test="commentAuditBy != null" >
+               , comment_audit_by = #{commentAuditBy,jdbcType=BIGINT}
+            </if>
+            <if test="commentAuditTime != null" >
+                ,comment_audit_time = #{commentAuditTime,jdbcType=TIMESTAMP}
+            </if>
+            <if test="commentRemark != null" >
+                ,comment_remark = #{commentRemark,jdbcType=VARCHAR}
+            </if>
+        </set>
+        where comment_id = #{commentId,jdbcType=BIGINT}
+    </update>
+
+   
+</mapper>

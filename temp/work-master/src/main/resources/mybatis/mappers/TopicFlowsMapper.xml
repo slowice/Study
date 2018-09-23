@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lanhu.work.mapper.TopicFlowsMapper" >
+
+    <resultMap id="BaseResultMap" type="com.lanhu.work.pojo.TopicFlows" >
+        <id column="id" property="id" jdbcType="BIGINT" />
+        <result column="flow_type" property="flowType" jdbcType="VARCHAR" />
+        <result column="flow_info" property="flowInfo" jdbcType="LONGVARCHAR" />
+        <result column="order_num" property="orderNum" jdbcType="INTEGER" />
+        <result column="topic_id" property="topicId" jdbcType="BIGINT" />
+        <result column="category_id" property="categoryId" jdbcType="BIGINT" />
+    </resultMap>
+
+    <sql id="Base_Column_List" >
+        id, flow_type, flow_info, order_num, topic_id, category_id
+    </sql>
+
+    <select id="findAllByTopicId" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+        select 
+        <include refid="Base_Column_List" />
+        from topic_flows
+        where topic_id = #{topicId,jdbcType=BIGINT}
+    </select>
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+        delete from topic_flows
+        where id = #{id,jdbcType=BIGINT}
+    </delete>
+
+    <insert id="insert" parameterType="com.lanhu.work.pojo.TopicFlows" >
+        insert into topic_flows (id, flow_type, flow_info, 
+            order_num, topic_id, category_id
+            )
+        values (#{id,jdbcType=BIGINT}, #{flowType,jdbcType=VARCHAR}, #{flowInfo,jdbcType=LONGVARCHAR}, 
+            #{orderNum,jdbcType=INTEGER}, #{topicId,jdbcType=BIGINT}, #{categoryId,jdbcType=BIGINT}
+            )
+    </insert>
+
+    <insert id="insertSelective" parameterType="com.lanhu.work.pojo.TopicFlows" >
+        insert into topic_flows
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                id,
+            </if>
+            <if test="flowType != null" >
+                flow_type,
+            </if>
+            <if test="flowInfo != null" >
+                flow_info,
+            </if>
+            <if test="orderNum != null" >
+                order_num,
+            </if>
+            <if test="topicId != null" >
+                topic_id,
+            </if>
+            <if test="categoryId != null" >
+                category_id,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                #{id,jdbcType=BIGINT},
+            </if>
+            <if test="flowType != null" >
+                #{flowType,jdbcType=VARCHAR},
+            </if>
+            <if test="flowInfo != null" >
+                #{flowInfo,jdbcType=LONGVARCHAR},
+            </if>
+            <if test="orderNum != null" >
+                #{orderNum,jdbcType=INTEGER},
+            </if>
+            <if test="topicId != null" >
+                #{topicId,jdbcType=BIGINT},
+            </if>
+            <if test="categoryId != null" >
+                #{categoryId,jdbcType=BIGINT},
+            </if>
+        </trim>
+    </insert>
+
+    <update id="updateByPrimaryKeySelective" parameterType="com.lanhu.work.pojo.TopicFlows" >
+        update topic_flows
+        <set >
+            <if test="flowType != null" >
+                flow_type = #{flowType,jdbcType=VARCHAR},
+            </if>
+            <if test="flowInfo != null" >
+                flow_info = #{flowInfo,jdbcType=LONGVARCHAR},
+            </if>
+            <if test="orderNum != null" >
+                order_num = #{orderNum,jdbcType=INTEGER},
+            </if>
+            <if test="topicId != null" >
+                topic_id = #{topicId,jdbcType=BIGINT},
+            </if>
+            <if test="categoryId != null" >
+                category_id = #{categoryId,jdbcType=BIGINT},
+            </if>
+        </set>
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+
+    <update id="updateByPrimaryKey" parameterType="com.lanhu.work.pojo.TopicFlows" >
+        update topic_flows
+        set flow_type = #{flowType,jdbcType=VARCHAR},
+            flow_info = #{flowInfo,jdbcType=LONGVARCHAR},
+            order_num = #{orderNum,jdbcType=INTEGER},
+            topic_id = #{topicId,jdbcType=BIGINT},
+            category_id = #{categoryId,jdbcType=BIGINT}
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+</mapper>

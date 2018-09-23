@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lanhu.work.mapper.CaptchaMapper" >
+
+    <resultMap id="BaseResultMap" type="com.lanhu.work.pojo.Captcha" >
+        <id column="id" property="id" jdbcType="BIGINT" />
+        <result column="captcha" property="captcha" jdbcType="VARCHAR" />
+        <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+        <result column="captcha_type" property="captchaType" jdbcType="INTEGER" />
+        <result column="mobile" property="mobile" jdbcType="VARCHAR" />
+        <result column="email" property="email" jdbcType="VARCHAR" />
+        <result column="captcha_mode" property="captchaMode" jdbcType="INTEGER" />
+        <result column="captcha_period" property="captchaPeriod" jdbcType="INTEGER" />
+        <result column="expire_time" property="expireTime" jdbcType="TIMESTAMP" />
+    </resultMap>
+
+    <sql id="Base_Column_List" >
+        id, captcha, create_time, captcha_type, mobile, email, captcha_mode, captcha_period, 
+        expire_time
+    </sql>
+
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+        select 
+        <include refid="Base_Column_List" />
+        from captcha
+        where id = #{id,jdbcType=BIGINT}
+    </select>
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+        delete from captcha
+        where id = #{id,jdbcType=BIGINT}
+    </delete>
+
+    <insert id="insert" parameterType="com.lanhu.work.pojo.Captcha" >
+        insert into captcha (id, captcha, create_time, 
+            captcha_type, mobile, email, 
+            captcha_mode, captcha_period, expire_time
+            )
+        values (#{id,jdbcType=BIGINT}, #{captcha,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, 
+            #{captchaType,jdbcType=INTEGER}, #{mobile,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, 
+            #{captchaMode,jdbcType=INTEGER}, #{captchaPeriod,jdbcType=INTEGER}, #{expireTime,jdbcType=TIMESTAMP}
+            )
+    </insert>
+
+    <insert id="insertSelective" parameterType="com.lanhu.work.pojo.Captcha" >
+        insert into captcha
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                id,
+            </if>
+            <if test="captcha != null" >
+                captcha,
+            </if>
+            <if test="createTime != null" >
+                create_time,
+            </if>
+            <if test="captchaType != null" >
+                captcha_type,
+            </if>
+            <if test="mobile != null" >
+                mobile,
+            </if>
+            <if test="email != null" >
+                email,
+            </if>
+            <if test="captchaMode != null" >
+                captcha_mode,
+            </if>
+            <if test="captchaPeriod != null" >
+                captcha_period,
+            </if>
+            <if test="expireTime != null" >
+                expire_time,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                #{id,jdbcType=BIGINT},
+            </if>
+            <if test="captcha != null" >
+                #{captcha,jdbcType=VARCHAR},
+            </if>
+            <if test="createTime != null" >
+                #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="captchaType != null" >
+                #{captchaType,jdbcType=INTEGER},
+            </if>
+            <if test="mobile != null" >
+                #{mobile,jdbcType=VARCHAR},
+            </if>
+            <if test="email != null" >
+                #{email,jdbcType=VARCHAR},
+            </if>
+            <if test="captchaMode != null" >
+                #{captchaMode,jdbcType=INTEGER},
+            </if>
+            <if test="captchaPeriod != null" >
+                #{captchaPeriod,jdbcType=INTEGER},
+            </if>
+            <if test="expireTime != null" >
+                #{expireTime,jdbcType=TIMESTAMP},
+            </if>
+        </trim>
+    </insert>
+
+    <update id="updateByPrimaryKeySelective" parameterType="com.lanhu.work.pojo.Captcha" >
+        update captcha
+        <set >
+            <if test="captcha != null" >
+                captcha = #{captcha,jdbcType=VARCHAR},
+            </if>
+            <if test="createTime != null" >
+                create_time = #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="captchaType != null" >
+                captcha_type = #{captchaType,jdbcType=INTEGER},
+            </if>
+            <if test="mobile != null" >
+                mobile = #{mobile,jdbcType=VARCHAR},
+            </if>
+            <if test="email != null" >
+                email = #{email,jdbcType=VARCHAR},
+            </if>
+            <if test="captchaMode != null" >
+                captcha_mode = #{captchaMode,jdbcType=INTEGER},
+            </if>
+            <if test="captchaPeriod != null" >
+                captcha_period = #{captchaPeriod,jdbcType=INTEGER},
+            </if>
+            <if test="expireTime != null" >
+                expire_time = #{expireTime,jdbcType=TIMESTAMP},
+            </if>
+        </set>
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+
+    <update id="updateByPrimaryKey" parameterType="com.lanhu.work.pojo.Captcha" >
+        update captcha
+        set captcha = #{captcha,jdbcType=VARCHAR},
+            create_time = #{createTime,jdbcType=TIMESTAMP},
+            captcha_type = #{captchaType,jdbcType=INTEGER},
+            mobile = #{mobile,jdbcType=VARCHAR},
+            email = #{email,jdbcType=VARCHAR},
+            captcha_mode = #{captchaMode,jdbcType=INTEGER},
+            captcha_period = #{captchaPeriod,jdbcType=INTEGER},
+            expire_time = #{expireTime,jdbcType=TIMESTAMP}
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+</mapper>

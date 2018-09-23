@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lanhu.work.mapper.UserMapper" >
+
+    <resultMap id="BaseResultMap" type="com.lanhu.work.pojo.User" >
+        <id column="id" property="id" jdbcType="BIGINT" />
+        <result column="login_pwd" property="loginPwd" jdbcType="VARCHAR" />
+        <result column="user_type" property="userType" jdbcType="VARCHAR" />
+        <result column="real_name" property="realName" jdbcType="VARCHAR" />
+        <result column="nick_name" property="nickName" jdbcType="VARCHAR" />
+        <result column="sex" property="sex" jdbcType="INTEGER" />
+        <result column="avatar" property="avatar" jdbcType="VARCHAR" />
+        <result column="mobile" property="mobile" jdbcType="VARCHAR" />
+        <result column="email" property="email" jdbcType="VARCHAR" />
+        <result column="id_card" property="idCard" jdbcType="VARCHAR" />
+        <result column="wei_xin" property="weiXin" jdbcType="VARCHAR" />
+        <result column="wei_bo" property="weiBo" jdbcType="VARCHAR" />
+        <result column="qq" property="qq" jdbcType="VARCHAR" />
+        <result column="birth_day" property="birthDay" jdbcType="DATE" />
+        <result column="address" property="address" jdbcType="VARCHAR" />
+        <result column="state" property="state" jdbcType="INTEGER" />
+        <result column="open_id" property="openId" jdbcType="VARCHAR" />
+        <result column="remark" property="remark" jdbcType="VARCHAR" />
+        <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+        <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+        <result column="update_by" property="updateBy" jdbcType="BIGINT" />
+        <result column="login_num" property="loginNum" jdbcType="INTEGER" />
+        <result column="login_time" property="loginTime" jdbcType="TIMESTAMP" />
+        <result column="old_login_time" property="oldLoginTime" jdbcType="TIMESTAMP" />
+        <result column="login_ip" property="loginIp" jdbcType="VARCHAR" />
+        <result column="old_login_ip" property="oldLoginIp" jdbcType="VARCHAR" />
+    </resultMap>
+
+    <sql id="Base_Column_List" >
+        id, login_pwd, user_type, real_name, nick_name, sex, avatar, mobile, email, id_card, 
+        wei_xin, wei_bo, qq, birth_day, address, state, open_id, remark, create_time, update_time, 
+        update_by, login_num, login_time, old_login_time, login_ip, old_login_ip
+    </sql>
+
+    <select id="thirdUserLogin" resultMap="BaseResultMap" parameterType="java.util.Map" >
+        select 
+        <include refid="Base_Column_List" />
+        from user
+        where open_id = #{openId,jdbcType=VARCHAR}
+        and user_type = #{userType,jdbcType=VARCHAR}
+    </select>
+    
+     <select id="login" resultMap="BaseResultMap" parameterType="java.util.Map" >
+        select 
+        <include refid="Base_Column_List" />
+        from user
+        where mobile = #{mobile,jdbcType=VARCHAR}
+        and login_pwd = #{loginPwd,jdbcType=VARCHAR}
+    </select>
+
+    <insert id="insert" parameterType="com.lanhu.work.pojo.User" keyProperty="id" useGeneratedKeys="true">
+        insert into user (id, login_pwd, user_type, 
+            real_name, nick_name, sex, 
+            avatar, mobile, email, 
+            id_card, wei_xin, wei_bo, 
+            qq, birth_day, address, 
+            state, open_id, remark, 
+            create_time,old_login_time)
+        values (#{id,jdbcType=BIGINT}, #{loginPwd,jdbcType=VARCHAR}, #{userType,jdbcType=VARCHAR}, 
+            #{realName,jdbcType=VARCHAR}, #{nickName,jdbcType=VARCHAR}, #{sex,jdbcType=INTEGER}, 
+            #{avatar,jdbcType=VARCHAR}, #{mobile,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, 
+            #{idCard,jdbcType=VARCHAR}, #{weiXin,jdbcType=VARCHAR}, #{weiBo,jdbcType=VARCHAR}, 
+            #{qq,jdbcType=VARCHAR}, #{birthDay,jdbcType=DATE}, #{address,jdbcType=VARCHAR}, 
+            #{state,jdbcType=INTEGER}, #{openId,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR}, 
+            now(),now())
+    </insert>
+
+    <update id="update" parameterType="com.lanhu.work.pojo.User" >
+        update user
+        <set >
+            update_time=now()
+            <if test="loginPwd != null" >
+                ,login_pwd = #{loginPwd,jdbcType=VARCHAR}
+            </if>
+            <if test="userType != null" >
+                ,user_type = #{userType,jdbcType=VARCHAR}
+            </if>
+            <if test="realName != null" >
+                ,real_name = #{realName,jdbcType=VARCHAR}
+            </if>
+            <if test="nickName != null" >
+               , nick_name = #{nickName,jdbcType=VARCHAR}
+            </if>
+            <if test="sex != null" >
+                ,sex = #{sex,jdbcType=INTEGER}
+            </if>
+            <if test="avatar != null" >
+                ,avatar = #{avatar,jdbcType=VARCHAR}
+            </if>
+            <if test="mobile != null" >
+               , mobile = #{mobile,jdbcType=VARCHAR}
+            </if>
+            <if test="email != null" >
+                ,email = #{email,jdbcType=VARCHAR}
+            </if>
+            <if test="idCard != null" >
+                ,id_card = #{idCard,jdbcType=VARCHAR}
+            </if>
+            <if test="weiXin != null" >
+              ,  wei_xin = #{weiXin,jdbcType=VARCHAR}
+            </if>
+            <if test="weiBo != null" >
+                ,wei_bo = #{weiBo,jdbcType=VARCHAR}
+            </if>
+            <if test="qq != null" >
+                ,qq = #{qq,jdbcType=VARCHAR}
+            </if>
+            <if test="birthDay != null" >
+                ,birth_day = #{birthDay,jdbcType=DATE}
+            </if>
+            <if test="address != null" >
+                ,address = #{address,jdbcType=VARCHAR}
+            </if>
+            <if test="state != null" >
+                ,state = #{state,jdbcType=INTEGER}
+            </if>
+            <if test="openId != null" >
+                ,open_id = #{openId,jdbcType=VARCHAR}
+            </if>
+            <if test="remark != null" >
+                ,remark = #{remark,jdbcType=VARCHAR}
+            </if>
+            <if test="updateBy != null" >
+                ,update_by = #{updateBy,jdbcType=BIGINT}
+            </if>
+            <if test="loginNum != null" >
+                ,login_num = #{loginNum,jdbcType=INTEGER}
+            </if>
+            <if test="loginTime != null" >
+                ,login_time = now()
+            </if>
+            <if test="oldLoginTime != null" >
+                ,old_login_time = #{oldLoginTime,jdbcType=TIMESTAMP}
+            </if>
+            <if test="loginIp != null" >
+                ,login_ip = #{loginIp,jdbcType=VARCHAR}
+            </if>
+            <if test="oldLoginIp != null" >
+               , old_login_ip = #{oldLoginIp,jdbcType=VARCHAR}
+            </if>
+        </set>
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+</mapper>

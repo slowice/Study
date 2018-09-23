@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lanhu.work.mapper.LocationsMapper" >
+
+    <resultMap id="BaseResultMap" type="com.lanhu.work.pojo.Locations" >
+        <id column="id" property="id" jdbcType="INTEGER" />
+        <result column="name" property="name" jdbcType="VARCHAR" />
+        <result column="parent_id" property="parentId" jdbcType="INTEGER" />
+        <result column="level" property="level" jdbcType="INTEGER" />
+        <result column="state" property="state" jdbcType="INTEGER" />
+        <result column="lng" property="lng" jdbcType="DECIMAL" />
+        <result column="lat" property="lat" jdbcType="DECIMAL" />
+    </resultMap>
+
+    <sql id="Base_Column_List" >
+        id, name, parent_id, level, state,lng,lat
+    </sql>
+
+    <select id="findAllByParentId" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+        select 
+        <include refid="Base_Column_List" />
+        from locations
+        where parent_id = #{parentId,jdbcType=INTEGER}
+        and state =1
+        order by id asc
+    </select>
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+        delete from locations
+        where id = #{id,jdbcType=INTEGER}
+    </delete>
+
+     <insert id="insert" parameterType="com.lanhu.work.pojo.Locations" >
+	    insert into locations (id, name, parent_id, 
+	      level, state, lng, 
+	      lat)
+	    values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{parentId,jdbcType=INTEGER}, 
+	      #{level,jdbcType=INTEGER}, #{state,jdbcType=INTEGER}, #{lng,jdbcType=DECIMAL}, 
+	      #{lat,jdbcType=DECIMAL})
+     </insert>
+
+   
+     <update id="updateByPrimaryKeySelective" parameterType="com.lanhu.work.pojo.Locations" >
+		    update locations
+		    <set >
+		      <if test="name != null" >
+		        name = #{name,jdbcType=VARCHAR},
+		      </if>
+		      <if test="parentId != null" >
+		        parent_id = #{parentId,jdbcType=INTEGER},
+		      </if>
+		      <if test="level != null" >
+		        level = #{level,jdbcType=INTEGER},
+		      </if>
+		      <if test="state != null" >
+		        state = #{state,jdbcType=INTEGER},
+		      </if>
+		      <if test="lng != null" >
+		        lng = #{lng,jdbcType=DECIMAL},
+		      </if>
+		      <if test="lat != null" >
+		        lat = #{lat,jdbcType=DECIMAL},
+		      </if>
+		    </set>
+		    where id = #{id,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.lanhu.work.pojo.Locations" >
+	    update locations
+	    set name = #{name,jdbcType=VARCHAR},
+	      parent_id = #{parentId,jdbcType=INTEGER},
+	      level = #{level,jdbcType=INTEGER},
+	      state = #{state,jdbcType=INTEGER},
+	      lng = #{lng,jdbcType=DECIMAL},
+	      lat = #{lat,jdbcType=DECIMAL}
+	    where id = #{id,jdbcType=INTEGER}
+   </update>
+</mapper>
