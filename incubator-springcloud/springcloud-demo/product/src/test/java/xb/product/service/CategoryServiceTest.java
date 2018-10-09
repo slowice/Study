@@ -20,7 +20,7 @@ public class CategoryServiceTest {
 
     @Test
     public void findCategoryTypeIn() throws Exception {
-        List<ProductCategory> list = categoryService.findCategoryTypeIn(Arrays.asList(11,22));
+        List<ProductCategory> list = categoryService.findCategoryTypeIn(Arrays.asList(11, 22));
         assertTrue(list.size() > 0);
     }
 

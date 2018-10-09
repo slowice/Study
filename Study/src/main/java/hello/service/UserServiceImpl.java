@@ -10,6 +10,9 @@ import org.springframework.transaction.TransactionStatus;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.support.DefaultTransactionDefinition;
 
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+
 @Service
 public class UserServiceImpl implements UserService{
     @Autowired
@@ -98,6 +101,11 @@ public class UserServiceImpl implements UserService{
     @Override
     public void update(User user) {
         userDao.update(user);
+    }
+
+    @Override
+    public void test(HttpServletResponse response) throws IOException {
+        response.getWriter().write("a啊啊啊啊啊啊啊");
     }
 
 }

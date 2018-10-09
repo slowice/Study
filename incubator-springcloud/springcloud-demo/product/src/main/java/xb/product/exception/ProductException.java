@@ -2,7 +2,7 @@ package xb.product.exception;
 
 import xb.product.enums.ResultEnum;
 
-public class ProductException extends RuntimeException{
+public class ProductException extends RuntimeException {
     private Integer code;
     private String message;
 
@@ -12,7 +12,8 @@ public class ProductException extends RuntimeException{
     }
 
     public ProductException(ResultEnum resultEnum) {
-
+        super(resultEnum.getMessage());
+        this.code = resultEnum.getCode();
     }
 
 }

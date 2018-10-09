@@ -11,8 +11,8 @@ public class TestController {
     private RestTemplate restTemplate;
 
     @GetMapping("/test")
-    public void consumer(){
-        String response = restTemplate.getForEntity("http://client-producer/getTest",String.class).getBody();
+    public void consumer() {
+        String response = restTemplate.getForEntity("http://client-producer/getTest", String.class).getBody();
         System.out.println(response);
     }
 }

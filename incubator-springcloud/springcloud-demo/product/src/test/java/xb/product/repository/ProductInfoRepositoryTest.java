@@ -16,18 +16,20 @@ import static org.junit.Assert.*;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class ProductInfoRepositoryTest {
+
     @Autowired
     private ProductInfoRepository productInfoRepository;
 
     @Test
     public void findByProductStatus() throws Exception {
         List<ProductInfo> list = productInfoRepository.findByProductStatus(0);
-        Assert.assertTrue(list.size()>0);
+        Assert.assertTrue(list.size() > 0);
     }
 
     @Test
     public void findByProductIn() throws Exception {
-        List<ProductInfo> list = productInfoRepository.findByProductIdIn(Arrays.asList("1","2"));
-        Assert.assertTrue(list.size()>0);
+        List<ProductInfo> list = productInfoRepository.findByProductIdIn(Arrays.asList("8461c072c47911e88118ef302013fbb6", "8461c072c47911e88118ef302013fbb6"));
+        Assert.assertTrue(list.size() > 0);
     }
+
 }

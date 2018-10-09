@@ -10,7 +10,7 @@ import org.springframework.web.client.RestTemplate;
 public class RestTemplateConfig {
     @Bean
     @LoadBalanced
-    public RestTemplate getRestTemplate(){
+    public RestTemplate getRestTemplate() {
         return new RestTemplate();
     }
 }

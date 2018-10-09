@@ -18,6 +18,6 @@ public class GreetingController {
     public Greeting greeting(@RequestParam(value="name", defaultValue="World") String name) {
         System.out.println(name);
         return new Greeting(counter.incrementAndGet(),
-                String.format(template, name));
+                String.format(template, name)+"345");
     }
 }

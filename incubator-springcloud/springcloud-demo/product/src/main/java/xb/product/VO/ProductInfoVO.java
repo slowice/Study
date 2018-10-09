@@ -8,6 +8,7 @@ import java.math.BigDecimal;
 @Data
 public class ProductInfoVO {
 
+    //jsonProperty这个注解可以改变返回给前端的key
     @JsonProperty("id")
     private String productId;
 

@@ -23,6 +23,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.util.HashMap;
 import java.util.Map;
@@ -40,6 +42,11 @@ public class TestController extends AbstractBaseDao{
     @Autowired
     DbTestService dbTestService;
     //endregion
+
+    @RequestMapping("/temp")
+    public void test2(HttpServletResponse response) throws IOException {
+        userService.test(response);
+    }
 
     //Controller test
     @RequestMapping(value = "/test")

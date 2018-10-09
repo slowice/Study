@@ -2,7 +2,7 @@ eureka:
   client:
     service-url:
       defaultZone: http://peer1:8761/eureka/
-  #instance:
+      #instance:
       # 10s未收到心跳，剔除instance 要比心跳时间大
       #lease-expiration-duration-in-seconds: 6
       # 心跳时间

@@ -4,6 +4,8 @@ import hello.entity.Student;
 import hello.entity.User;
 
 import org.apache.commons.beanutils.BeanUtils;
+import org.apache.commons.lang3.time.DateUtils;
+import org.apache.commons.lang3.time.FastDateFormat;
 import org.springframework.boot.context.embedded.EmbeddedWebApplicationContext;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.MessageSource;
@@ -41,6 +43,7 @@ public class Test {
         Set<Integer> s2 = new HashSet<>(Arrays.asList(3,5,6));
         s1.retainAll(s2);
         System.out.println(s1);*/
+        test7();
     }
 
     private static class runner implements Runnable {
@@ -206,5 +209,12 @@ public class Test {
         for(Student_ s:list){
             System.out.println( s.getS_name());
         }
+    }
+
+    public static void test7(){
+        Date date = new Date();
+
+        String now = FastDateFormat.getInstance("MM月dd日").format( DateUtils.addDays(date,-1));
+        System.out.println(now);
     }
 }

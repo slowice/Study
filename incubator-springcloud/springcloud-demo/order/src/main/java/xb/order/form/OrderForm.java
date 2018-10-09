@@ -1,13 +1,13 @@
 package xb.order.form;
 
 import lombok.Data;
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.constraints.NotEmpty;
 
+
+/**
+ * 用来存储前端传来的参数，用了表单认证
+ */
 @Data
 public class OrderForm {
     @NotEmpty(message = "姓名必填")

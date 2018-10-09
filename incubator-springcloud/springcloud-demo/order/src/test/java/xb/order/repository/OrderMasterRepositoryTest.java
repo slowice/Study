@@ -19,7 +19,7 @@ public class OrderMasterRepositoryTest {
     OrderMasterRepository orderMasterRepository;
 
     @Test
-    public void testSave(){
+    public void testSave() {
         OrderMaster orderMaster = new OrderMaster();
         orderMaster.setOrderId("1234567");
         orderMaster.setBuyerName("阿斌哥");

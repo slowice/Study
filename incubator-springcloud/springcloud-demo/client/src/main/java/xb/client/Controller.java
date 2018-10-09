@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class Controller {
     @RequestMapping("/actuator/info")
     @ResponseBody
-    public String test(){
+    public String test() {
         return "123";
     }
 }

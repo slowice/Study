@@ -17,7 +17,7 @@ public class OrderDetailRepositoryTest {
     OrderDetailRepository orderDetailRepository;
 
     @Test
-    public void testSave(){
+    public void testSave() {
         OrderDetail orderDetail = new OrderDetail();
         orderDetail.setDetailId("7654321");
         orderDetail.setOrderId("1234567");

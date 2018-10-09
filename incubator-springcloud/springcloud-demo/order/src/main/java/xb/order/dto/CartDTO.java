@@ -1,8 +1,6 @@
-package xb.product.DTO;
+package xb.order.dto;
 
 import lombok.Data;
-
-import javax.persistence.criteria.CriteriaBuilder;
 
 @Data
 public class CartDTO {

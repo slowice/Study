@@ -16,11 +16,14 @@ import static org.junit.Assert.*;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class ProductCategoryRepositoryTest {
+
     @Autowired
     ProductCategoryRepository productCategoryRepository;
+
     @Test
     public void findByCategoryTypeIn() throws Exception {
-        List<ProductCategory> list = productCategoryRepository.findByCategoryTypeIn(Arrays.asList(11,22));
+        List<ProductCategory> list = productCategoryRepository.findByCategoryTypeIn(Arrays.asList(11, 22));
         org.junit.Assert.assertTrue(list.size() > 0);
     }
+
 }

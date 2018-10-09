@@ -14,8 +14,10 @@ public class ProductInfo {
     private String productId;
     private String productName;
     private BigDecimal productPrice;
+    //商品库存
     private Integer productStock;
     private String productDescription;
+    //商品小图
     private String productIcon;
     private Integer productStatus;
     private Integer categoryType;

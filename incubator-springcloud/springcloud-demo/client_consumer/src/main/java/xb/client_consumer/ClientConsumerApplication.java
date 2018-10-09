@@ -8,7 +8,7 @@ import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 @SpringBootApplication
 @EnableDiscoveryClient
 public class ClientConsumerApplication {
-	public static void main(String[] args) {
-		SpringApplication.run(ClientConsumerApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(ClientConsumerApplication.class, args);
+    }
 }

@@ -1,9 +1,14 @@
 package xb.order.service.impl;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import xb.order.client.ProductClient;
+import xb.order.dataobject.OrderDetail;
 import xb.order.dataobject.OrderMaster;
+import xb.order.dataobject.ProductInfo;
+import xb.order.dto.CartDTO;
 import xb.order.dto.OrderDTO;
 import xb.order.enums.OrderStatus;
 import xb.order.enums.PayStatus;
@@ -13,13 +18,20 @@ import xb.order.service.OrderService;
 import xb.order.utils.KeyUtil;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
+@Slf4j
 public class OrderServiceImpl implements OrderService {
+    @Autowired
+    ProductClient productClient;
     @Autowired
     OrderMasterRepository orderMasterRepository;
     @Autowired
     OrderDetailRepository orderDetailRepository;
+
     /*1.参数校验
     2.查询商品信息
     3.计算总价
@@ -27,10 +39,41 @@ public class OrderServiceImpl implements OrderService {
     5.订单入库*/
     @Override
     public OrderDTO create(OrderDTO orderDTO) {
+        /*
+            传入的orderDTO中的orderDetail只有一部分信息，需要在这里将信息补全
+         */
+        String orderId = KeyUtil.genUniqueKey();
+        //查询商品信息
+        List<String> productIdList = orderDTO.getOrderDetailList().stream()
+                .map(OrderDetail::getProductId).collect(Collectors.toList());
+        List<ProductInfo> productInfoList = productClient.listForOrder(productIdList);
+        BigDecimal amount = BigDecimal.ZERO;
+        //计算总价
+        for (OrderDetail orderDetail : orderDTO.getOrderDetailList()) {
+            for (ProductInfo productInfo : productInfoList) {
+                if (orderDetail.getProductId().equals(productInfo.getProductId())) {
+                    amount = new BigDecimal(orderDetail.getProductQuantity()).multiply(productInfo.getProductPrice()).add(amount);
+                    BeanUtils.copyProperties(productInfo, orderDetail);
+                    orderDetail.setOrderId(orderId);
+                    orderDetail.setDetailId(KeyUtil.genUniqueKey());
+                    //订单详情入库
+                    orderDetailRepository.save(orderDetail);
+                }
+            }
+        }
+
+        log.info("amount is {}" + amount);
+        //扣库存
+        List<CartDTO> cartDTOS = orderDTO.getOrderDetailList().stream()
+                .map(e -> new CartDTO(e.getProductId(), e.getProductQuantity()))
+                .collect(Collectors.toList());
+        log.info("cartDtoList is {}" + cartDTOS);
+        productClient.decreaseStock(cartDTOS);
+        //订单入库
         OrderMaster orderMaster = new OrderMaster();
-        orderDTO.setOrderId(KeyUtil.genUniqueKey());
-        BeanUtils.copyProperties(orderDTO,orderMaster);
-        orderMaster.setOrderAmount(new BigDecimal(5));
+        orderDTO.setOrderId(orderId);
+        BeanUtils.copyProperties(orderDTO, orderMaster);
+        orderMaster.setOrderAmount(amount);
         orderMaster.setOrderStatus(OrderStatus.NEW.getCode());
         orderMaster.setPayStatus(PayStatus.WAIT.getCode());
         orderMasterRepository.save(orderMaster);

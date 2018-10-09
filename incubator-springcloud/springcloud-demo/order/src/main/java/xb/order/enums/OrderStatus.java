@@ -4,9 +4,9 @@ import lombok.Getter;
 
 @Getter
 public enum OrderStatus {
-    NEW(0,"新建"),
-    FINISH(1,"完成"),
-    CANCEL(2,"取消"),
+    NEW(0, "新建"),
+    FINISH(1, "完成"),
+    CANCEL(2, "取消"),
     ;
 
     private Integer code;
