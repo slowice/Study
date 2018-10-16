@@ -3,16 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>test</title>
-    <script type="text/javascript" src="../js/jquery-3.2.1.js" ></script>
+    <script type="text/javascript" src="../js/jquery-3.2.1.js"></script>
 
     <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
-    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-    <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
-    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="../bootstrap//bootstrap.min.css">
 
     <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
-    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>    <script type="text/javascript" src="../js/jquery-3.2.1.js" ></script>
+    <script src="../bootstrap/bootstrap.min.js"></script>
 
     <script type="text/javascript">
         $(function () {
@@ -362,33 +359,54 @@
     <div role="tabpanel" class="tab-pane" id="settings">...</div>
 </div>-->
 <#--轮播图组件-->
-<div class="carousel slide" id="carousel-18944">
-    <ol class="carousel-indicators">
-        <li class="active" data-slide-to="0" data-target="#carousel-18944"></li>
-        <li data-slide-to="1" data-target="#carousel-18944" class=""></li>
-        <li data-slide-to="2" data-target="#carousel-18944" class=""></li>
-    </ol>
+<#--<div class="carousel slide" id="carousel-18944">-->
+    <#--<ol class="carousel-indicators">-->
+        <#--<li class="active" data-slide-to="0" data-target="#carousel-18944"></li>-->
+        <#--<li data-slide-to="1" data-target="#carousel-18944" class=""></li>-->
+        <#--<li data-slide-to="2" data-target="#carousel-18944" class=""></li>-->
+    <#--</ol>-->
+    <#--<div class="carousel-inner">-->
+        <#--<div class="item active"> <img alt="" src="../carousel-img/carousel1.jpg">-->
+            <#--<div class="carousel-caption" contenteditable="true">-->
+                <#--<h4>便宜！</h4>-->
+                <#--<p>只要一元，统统一元，一元买不了吃亏，一元买不了上当，错过这家，没有下家！</p>-->
+            <#--</div>-->
+        <#--</div>-->
+        <#--<div class="item"> <img alt="" src="../carousel-img/carousel2.jpg">-->
+            <#--<div class="carousel-caption" contenteditable="true">-->
+                <#--<h4>质量！</h4>-->
+                <#--<p>这么帅的小车车见过没？高端大气上档次，低调奢华有内涵！</p>-->
+            <#--</div>-->
+        <#--</div>-->
+        <#--<div class="item"> <img alt="" src="../carousel-img/carousel3.jpg">-->
+            <#--<div class="carousel-caption" contenteditable="true">-->
+                <#--<h4>优惠！</h4>-->
+                <#--<p>奔驰，宝马，奥迪，兰博基尼，三元一辆，十元三辆！</p>-->
+            <#--</div>-->
+        <#--</div>-->
+    <#--</div>-->
+    <#--<a data-slide="prev" href="#carousel-18944" class="left carousel-control">‹</a> <a data-slide="next" href="#carousel-18944" class="right carousel-control">›</a>-->
+<#--</div>-->
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
-        <div class="item active"> <img alt="" src="../carousel-img/carousel1.jpg">
-            <div class="carousel-caption" contenteditable="true">
-                <h4>便宜！</h4>
-                <p>只要一元，统统一元，一元买不了吃亏，一元买不了上当，错过这家，没有下家！</p>
-            </div>
+        <div class="carousel-item active">
+            <img class="d-block w-100" src="../carousel-img/carousel1.jpg" alt="First slide">
         </div>
-        <div class="item"> <img alt="" src="../carousel-img/carousel2.jpg">
-            <div class="carousel-caption" contenteditable="true">
-                <h4>质量！</h4>
-                <p>这么帅的小车车见过没？高端大气上档次，低调奢华有内涵！</p>
-            </div>
+        <div class="carousel-item">
+            <img class="d-block w-100" src="../carousel-img/carousel2.jpg" alt="Second slide">
         </div>
-        <div class="item"> <img alt="" src="../carousel-img/carousel3.jpg">
-            <div class="carousel-caption" contenteditable="true">
-                <h4>优惠！</h4>
-                <p>奔驰，宝马，奥迪，兰博基尼，三元一辆，十元三辆！</p>
-            </div>
+        <div class="carousel-item">
+            <img class="d-block w-100" src="../carousel-img/carousel3.jpg" alt="Third slide">
         </div>
     </div>
-    <a data-slide="prev" href="#carousel-18944" class="left carousel-control">‹</a> <a data-slide="next" href="#carousel-18944" class="right carousel-control">›</a>
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
 </div>
 
 <#--商品分类-->

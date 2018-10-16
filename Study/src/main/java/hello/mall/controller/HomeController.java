@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("/mall")
-public class HomeController {
+public class    HomeController {
 
     @RequestMapping("/home")
     public String test(){

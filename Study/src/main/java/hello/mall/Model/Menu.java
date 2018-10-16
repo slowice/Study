@@ -1,5 +1,6 @@
 package hello.mall.Model;
 
+
 public class Menu {
     private String name;
     private String link;

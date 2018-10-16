@@ -12,7 +12,7 @@ import org.springframework.web.servlet.ModelAndView;
 import java.util.List;
 
 @Controller
-public class ManageController {
+public class    ManageController {
     @Autowired
     private MenuService menuService;
 

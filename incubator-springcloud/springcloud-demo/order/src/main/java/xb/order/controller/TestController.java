@@ -1,8 +1,10 @@
 package xb.order.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
@@ -13,7 +15,11 @@ import java.util.Arrays;
 import java.util.List;
 
 @RestController
+@RefreshScope
 public class TestController {
+    @Value("${env}")
+    private String env;
+
     @Autowired
     private RestTemplate restTemplate;
 
@@ -46,6 +52,11 @@ public class TestController {
         //第三方式，和第二种方式差不多，只不过是换了注解的形式
         String response = restTemplate.getForObject("http://PRODUCT/msg", String.class);
         return response;
+    }
+
+    @GetMapping("/test4")
+    public String test4(){
+        return env;
     }
 
     @GetMapping("/getProductMsg")

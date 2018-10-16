@@ -43,7 +43,7 @@ public class Test {
         Set<Integer> s2 = new HashSet<>(Arrays.asList(3,5,6));
         s1.retainAll(s2);
         System.out.println(s1);*/
-        test7();
+        Runtime.getRuntime().exec("open /Users/xubin/Applications/123.txt");
     }
 
     private static class runner implements Runnable {
