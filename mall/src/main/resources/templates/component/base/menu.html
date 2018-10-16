@@ -1,34 +1,32 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
-
-
 <nav class="col-md-2 d-none d-md-block bg-light sidebar">
     <div class="sidebar-sticky">
         <ul class="nav flex-column">
-            <li class="nav-item">
-                <a class="nav-link active" href="#">
+            <li class="nav-item" id="order">
+                <a class="nav-link active" href="/mall/manage/order">
                     <span data-feather="file"></span>
                     Orders
                 </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/mall/manage/prdocutlist">
+            <li class="nav-item" id="product">
+                <a class="nav-link" href="/mall/manage/product">
                     <span data-feather="shopping-cart"></span>
                     产品设置
                 </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" id="customer">
                 <a class="nav-link" href="#">
                     <span data-feather="users"></span>
                     Customers
                 </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" id="reports">
                 <a class="nav-link" href="#">
                     <span data-feather="bar-chart-2"></span>
                     Reports
                 </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" id="itegration">
                 <a class="nav-link" href="#">
                     <span data-feather="layers"></span>
                     Integrations
@@ -70,18 +68,20 @@
         <!--</ul>-->
     </div>
 </nav>
-
 <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
 <script>
     feather.replace()
 </script>
 <script th:inline="javascript">
-    var menuList = [[${menuList}]];
-    for(var i in menuList){
-        var menu = menuList[i];
-        if(!(menu.pid)){
-            console.log(menu.name)
-        }
+    var message = [[${menu}]];
+    if('product' == message){
+        var brothers = $('#product').siblings();
+        $.each(brothers,function (index,value) {
+            $(value).find('a').removeClass('active')
+            console.log($(value))
+        })
+        //$('#order a').removeClass('active');
+        $('#product a').addClass('active');
     }
 </script>
 </html>

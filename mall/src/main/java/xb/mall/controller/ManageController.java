@@ -33,10 +33,20 @@ public class ManageController {
         return modelAndView;
     }
 
-    @RequestMapping("/productlist")
+    @RequestMapping("/product")
     public ModelAndView getProductList(){
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("manage_product_list");
+        modelAndView.addObject("menu","product");
+        return modelAndView;
+    }
+
+    @RequestMapping("/order")
+    public ModelAndView getOrderList(){
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("manage_order_list");
+        modelAndView.addObject("menu","order");
+
         return modelAndView;
     }
 }
