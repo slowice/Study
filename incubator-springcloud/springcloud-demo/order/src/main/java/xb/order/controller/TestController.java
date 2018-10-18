@@ -17,8 +17,8 @@ import java.util.List;
 @RestController
 @RefreshScope
 public class TestController {
-    @Value("${env}")
-    private String env;
+    // @Value("${env}")
+    // private String env;
 
     @Autowired
     private RestTemplate restTemplate;
@@ -54,10 +54,6 @@ public class TestController {
         return response;
     }
 
-    @GetMapping("/test4")
-    public String test4(){
-        return env;
-    }
 
     @GetMapping("/getProductMsg")
     public String getProductMsg() {

@@ -1,17 +1,24 @@
 spring:
   application:
     name: order
-  cloud:
-    config:
-      discovery:
-        enabled: true
-        service-id: CONFIG
-      profile: dev
+  #  cloud:
+  #    config:
+  #      discovery:
+  #        enabled: true
+  #        service-id: CONFIG
+  #      profile: dev
   rabbitmq:
     host: localhost
     port: 5672
     username: guest
     password: guest
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: dy82341733
+    url: jdbc:mysql://127.0.0.1:3306/test?characterEncoding=utf-8&useSSL=false
+  jpa:
+    show-sql: true
 
 #这个配置不要放在配置中心，因为如果不用默认端口的话，就无法通过eureka来访问配置中心的服务
 eureka:

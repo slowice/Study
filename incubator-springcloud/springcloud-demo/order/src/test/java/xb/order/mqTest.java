@@ -16,4 +16,15 @@ public class mqTest extends  OrderApplicationTests{
     public void send(){
         amqpTemplate.convertAndSend("myQueue","now " + new Date());
     }
+
+    //对发送的消息添加路由，发往指定的queue
+    @Test
+    public void sendComputer() {
+        amqpTemplate.convertAndSend("myOrder", "computer", "我是电脑订单");
+    }
+
+    @Test
+    public void sendFruit() {
+        amqpTemplate.convertAndSend("myOrder", "fruit", "我是水果订单");
+    }
 }
