@@ -53,6 +53,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-amqp</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>org.springframwork.cloud</groupId>
+            <artifactId>spring-cloud-starter-steam-reabbit</artifactId>
+        </dependency>
     </dependencies>
 
 </project>
