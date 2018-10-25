@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 import xb.order.client.ProductClient;
+import xb.order.config.GirlConfig;
 import xb.order.dataobject.ProductInfo;
 
 import java.util.Arrays;
@@ -17,8 +18,8 @@ import java.util.List;
 @RestController
 @RefreshScope
 public class TestController {
-    // @Value("${env}")
-    // private String env;
+    @Autowired
+    GirlConfig girlConfig;
 
     @Autowired
     private RestTemplate restTemplate;
@@ -54,6 +55,12 @@ public class TestController {
         return response;
     }
 
+    @GetMapping("/test4")
+    public void test4() {
+        String girlName = girlConfig.getName();
+        System.out.println(girlName);
+    }
+
 
     @GetMapping("/getProductMsg")
     public String getProductMsg() {
@@ -61,9 +68,4 @@ public class TestController {
         return response;
     }
 
-//    @GetMapping("/test2")
-//    public void test2(){
-//        List<ProductInfo> list = productClient.listForOrder(Arrays.asList("1","2"));
-//        System.out.println(list.size());
-//    }
 }

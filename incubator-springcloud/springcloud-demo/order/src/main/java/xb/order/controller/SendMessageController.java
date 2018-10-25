@@ -15,8 +15,6 @@ import java.util.Date;
 @RestController
 @EnableBinding({Source.class})
 public class SendMessageController {
-    //    @Autowired
-//    private Source source;
     @Autowired
     @Qualifier("output")
     MessageChannel output;

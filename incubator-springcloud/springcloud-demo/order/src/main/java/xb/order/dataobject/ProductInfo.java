@@ -1,6 +1,7 @@
 package xb.order.dataobject;
 
 import lombok.Data;
+import lombok.ToString;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -9,6 +10,7 @@ import java.util.Date;
 
 @Data
 @Entity
+@ToString
 public class ProductInfo {
     @Id
     private String productId;

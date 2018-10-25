@@ -1,12 +1,6 @@
 spring:
   application:
     name: order
-  #  cloud:
-  #    config:
-  #      discovery:
-  #        enabled: true
-  #        service-id: CONFIG
-  #      profile: dev
   rabbitmq:
     host: localhost
     port: 5672
@@ -19,16 +13,22 @@ spring:
     url: jdbc:mysql://127.0.0.1:3306/test?characterEncoding=utf-8&useSSL=false
   jpa:
     show-sql: true
+  redis:
+    host: 127.0.0.1
+    port: 6379
   cloud:
-    stream:
-      bindings:
-        input:
-          destination: mqTestDefault
-        output:
-          destination: mqTestDefault
-          contentType: text/plain
-        ###  content-type: application/json
-
+    config:
+      discovery:
+        enabled: true
+        service-id: CONFIG
+      profile: dev
+#    stream:
+#      bindings:
+#        input:
+#          destination: mqTestDefault
+#        output:
+#          destination: mqTestDefault
+#          contentType: text/plain
 #这个配置不要放在配置中心，因为如果不用默认端口的话，就无法通过eureka来访问配置中心的服务
 eureka:
   client:
