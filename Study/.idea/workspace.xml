@@ -2,329 +2,88 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c019ea67-fa08-4f2f-bd99-eed5b6e457c6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/hello/io/OutToBrowser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/bootstrapdemo.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/order/src/main/java/xb/order/dto/CartDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/order/src/main/java/xb/order/message/ProductInfoReceiver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/product/src/main/java/xb/product/config/BoyConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/product/src/main/java/xb/product/dataobject/DecreaseStockInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_43.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hello/GreetingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hello/GreetingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hello/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hello/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hello/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hello/TestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hello/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hello/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hello/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hello/service/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../annotation_demo/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../annotation_demo/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../annotation_demo/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../annotation_demo/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../annotation_demo/src/main/java/xb/annotation_demo/AnnotationDemoApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../annotation_demo/src/main/java/xb/annotation_demo/anno/PasswordUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../annotation_demo/src/main/java/xb/annotation_demo/anno/Test.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../annotation_demo/src/main/java/xb/annotation_demo/anno/UserCases.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../annotation_demo/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../annotation_demo/src/test/java/xb/annotation_demo/AnnotationDemoApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../eureka/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../eureka/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../eureka/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../eureka/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../eureka/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../eureka/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../eureka/src/main/java/xb/eureka/EurekaApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../eureka/src/main/resources/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../eureka/src/test/java/xb/eureka/EurekaApplicationTests.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../incubator-dubbo/mvnw.cmd" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../incubator-springcloud/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../incubator-springcloud/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../incubator-springcloud/.idea/dataSources.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../incubator-springcloud/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../incubator-springcloud/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/demo/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/eureka_server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/eureka_server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/eureka_server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/eureka_server/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../incubator-springcloud/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../incubator-springcloud/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../incubator-springcloud/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../incubator-springcloud/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/order/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/order/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/order/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/order/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/order/src/main/java/xb/order/client/ProductClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/order/src/main/java/xb/order/client/ProductClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/order/src/main/java/xb/order/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/order/src/main/java/xb/order/controller/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/order/src/main/java/xb/order/config/GirlConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/order/src/main/java/xb/order/config/GirlConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/order/src/main/java/xb/order/controller/SendMessageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/order/src/main/java/xb/order/controller/SendMessageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/order/src/main/java/xb/order/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/order/src/main/java/xb/order/controller/TestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/order/src/main/java/xb/order/dataobject/OrderDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/order/src/main/java/xb/order/dataobject/OrderDetail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/order/src/main/java/xb/order/dataobject/OrderMaster.java" beforeDir="false" afterPath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/order/src/main/java/xb/order/dataobject/OrderMaster.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/order/src/main/java/xb/order/dto/OrderDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/order/src/main/java/xb/order/dto/OrderDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/order/src/main/java/xb/order/form/OrderForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/order/src/main/java/xb/order/form/OrderForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/order/src/main/java/xb/order/service/impl/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/order/src/main/java/xb/order/service/impl/OrderServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/order/src/main/java/xb/order/utils/KeyUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/order/src/main/java/xb/order/utils/KeyUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/order/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/order/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/order/src/main/java/xb/order/dataobject/ProductInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/order/src/main/java/xb/order/dataobject/ProductInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/order/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/order/src/main/resources/bootstrap.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/product/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/product/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/product/src/main/java/xb/product/DTO/CartDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/product/src/main/java/xb/product/DTO/CartDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/product/src/main/java/xb/product/VO/ProductInfoVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/product/src/main/java/xb/product/VO/ProductInfoVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/product/src/main/java/xb/product/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/product/src/main/java/xb/product/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/product/src/main/java/xb/product/dataobject/ProductInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/product/src/main/java/xb/product/dataobject/ProductInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/product/src/main/java/xb/product/enums/ResultEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/product/src/main/java/xb/product/enums/ResultEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/product/src/main/java/xb/product/exception/ProductException.java" beforeDir="false" afterPath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/product/src/main/java/xb/product/exception/ProductException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/product/src/main/java/xb/product/repository/ProductInfoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/product/src/main/java/xb/product/repository/ProductInfoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/product/src/main/java/xb/product/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/product/src/main/java/xb/product/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/product/src/main/java/xb/product/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/product/src/main/java/xb/product/controller/TestController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/product/src/main/java/xb/product/service/impl/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/product/src/main/java/xb/product/service/impl/ProductServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/product/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/product/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/product/src/test/java/xb/product/repository/ProductCategoryRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/product/src/test/java/xb/product/repository/ProductCategoryRepositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/product/src/test/java/xb/product/repository/ProductInfoRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/product/src/test/java/xb/product/repository/ProductInfoRepositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/product/src/test/java/xb/product/service/ProductServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/product/src/test/java/xb/product/service/ProductServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../module-test/common/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../module-test/module-test.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../module-test/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../properties_test/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../properties_test/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../properties_test/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../properties_test/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../properties_test/src/main/java/xb/properties_test/PropertiesTestApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../properties_test/src/main/java/xb/properties_test/test/PropertiesDemo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../properties_test/src/main/java/xb/properties_test/test/TestController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../properties_test/src/main/resources/application-dev.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../properties_test/src/main/resources/application-pro.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../properties_test/src/main/resources/application-test.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../properties_test/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../properties_test/src/test/java/xb/properties_test/PropertiesTestApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../properties_test/src/test/java/xb/properties_test/test/PropertiesDemoTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__asm_asm_3_3_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__com_alibaba_druid_1_1_10.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__com_alibaba_druid_spring_boot_starter_1_1_10.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__com_alibaba_fastjson_1_2_49.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__com_aliyun_oss_aliyun_sdk_oss_2_8_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__com_fasterxml_classmate_1_3_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__com_fasterxml_jackson_dataformat_jackson_dataformat_yaml_2_9_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_9_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_9_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_9_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__com_github_jsqlparser_jsqlparser_1_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__com_github_pagehelper_pagehelper_5_1_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__com_github_pagehelper_pagehelper_spring_boot_autoconfigure_1_2_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__com_github_pagehelper_pagehelper_spring_boot_starter_1_2_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__com_github_stephenc_jcip_jcip_annotations_1_0_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_4_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__com_nimbusds_nimbus_jose_jwt_4_28.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__com_zaxxer_HikariCP_2_7_8.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_8_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__commons_codec_commons_codec_1_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__commons_collections_commons_collections_3_2_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_3_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__commons_io_commons_io_2_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__commons_lang_commons_lang_2_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__commons_logging_commons_logging_1_1_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__io_netty_netty_buffer_4_1_22_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__io_netty_netty_codec_4_1_22_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__io_netty_netty_codec_dns_4_1_22_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__io_netty_netty_common_4_1_22_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__io_netty_netty_handler_4_1_22_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__io_netty_netty_resolver_4_1_22_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__io_netty_netty_resolver_dns_4_1_22_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__io_netty_netty_transport_4_1_22_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__io_projectreactor_reactor_core_3_1_5_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__javax_annotation_javax_annotation_api_1_3_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__javax_cache_cache_api_1_1_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__javax_validation_validation_api_2_0_1_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__joda_time_joda_time_2_9_9.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__junit_junit_4_12.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_45.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_7_10.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_7_10.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__net_minidev_accessors_smart_1_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__net_minidev_asm_1_0_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__net_minidev_json_smart_2_2_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__net_sf_ezmorph_ezmorph_1_0_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__net_sf_json_lib_json_lib_jdk15_2_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_3_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__org_apache_commons_commons_pool2_2_5_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_9.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_10_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_10_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_8_5_28.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_8_5_28.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_8_5_28.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_8_13.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__org_assertj_assertj_core_3_9_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__org_attoparser_attoparser_2_0_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__org_hamcrest_hamcrest_library_1_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_6_0_7_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_2_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__org_jdom_jdom_1_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__org_jodd_jodd_bean_3_7_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__org_jodd_jodd_core_3_7_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__org_mockito_mockito_core_2_15_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__org_mybatis_mybatis_3_4_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__org_mybatis_mybatis_spring_1_3_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_autoconfigure_1_3_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_starter_1_3_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__org_objenesis_objenesis_2_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__org_ow2_asm_asm_5_0_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__org_reactivestreams_reactive_streams_1_0_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__org_redisson_redisson_3_7_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_5_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_25.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_0_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_0_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_0_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_2_0_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_redis_2_0_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_0_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_0_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_0_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_0_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_thymeleaf_2_0_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_0_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_0_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_0_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_2_0_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_0_5_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__org_springframework_data_spring_data_keyvalue_2_0_5_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__org_springframework_data_spring_data_redis_2_0_5_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__org_springframework_spring_aop_5_0_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__org_springframework_spring_beans_5_0_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__org_springframework_spring_context_5_0_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__org_springframework_spring_context_support_5_0_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__org_springframework_spring_core_5_0_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__org_springframework_spring_expression_5_0_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__org_springframework_spring_jcl_5_0_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__org_springframework_spring_jdbc_5_0_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__org_springframework_spring_oxm_5_0_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__org_springframework_spring_test_5_0_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__org_springframework_spring_tx_5_0_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__org_springframework_spring_web_5_0_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__org_springframework_spring_webmvc_5_0_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__org_thymeleaf_extras_thymeleaf_extras_java8time_3_0_1_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__org_thymeleaf_thymeleaf_3_0_9_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__org_thymeleaf_thymeleaf_spring5_3_0_9_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__org_unbescape_unbescape_1_1_5_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_5_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__org_yaml_snakeyaml_1_19.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/libraries/Maven__redis_clients_jedis_2_9_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/doc/手机端基础接口文档V1.0.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/WorkApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/WorkServletInitializer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/annotation/IgnoreSecurity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/aspect/WebLogAspect.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/bean/HandlerInterceptorBean.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/bean/HttpBean.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/bean/JedisRedisBean.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/bean/RedissonBean.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/config/AliossConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/config/HttpConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/config/RedisConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/config/RedissionConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/controller/BaseController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/controller/CategoryController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/controller/CommentController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/controller/LocationsController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/controller/LoginController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/controller/TestController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/controller/TopicController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/controller/UploadController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/enums/BusErrorCode.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/enums/UploadFileType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/exception/ValidException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/handler/GlobalExceptionHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/interceptor/SignAuthIntercept.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/interceptor/TokenAuthInterceptor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/jwt/Jwt.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/jwt/JwtResult.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/jwt/TokenState.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/locker/DistributedLocker.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/locker/impl/RedissonDistributedLocker.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/mapper/AdminUserMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/mapper/BusDocumentTemplateMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/mapper/CaptchaMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/mapper/CategoryMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/mapper/CommentMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/mapper/DeptMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/mapper/LocationsMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/mapper/TopicFlowsMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/mapper/TopicMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/mapper/UploadFileConfigMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/mapper/UserAccessLogMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/mapper/UserMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/pojo/AdminUser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/pojo/BusDocumentTemplate.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/pojo/Captcha.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/pojo/Category.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/pojo/Comment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/pojo/Dept.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/pojo/Locations.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/pojo/Topic.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/pojo/TopicFlows.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/pojo/UploadFileConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/pojo/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/pojo/UserAccessLog.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/security/Cryptos.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/security/Digests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/service/AdminUserService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/service/BusDocumentTemplateService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/service/CaptchaService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/service/CategoryService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/service/CommentService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/service/DeptService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/service/LocationsService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/service/OSSHelperService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/service/TopicFlowsService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/service/TopicService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/service/UploadFileConfigService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/service/UserAccessLogService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/service/UserService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/task/Task.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/utils/AliUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/utils/Bean2MapUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/utils/BeanUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/utils/Encodes.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/utils/Exceptions.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/utils/FileNameGenerator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/utils/HttpUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/utils/IpUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/utils/R.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/utils/RedisUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/utils/URLFileDownloader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/validator/rule/Sex.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/validator/rule/SexValidator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/validator/rule/UserType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/validator/rule/UserTypeValidator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/vo/CategoryListPageVo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/vo/CommentSendVo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/vo/FileUploadVo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/vo/FrontCommentListPageVo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/vo/LocationsListVo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/vo/ThirdUserloginVo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/vo/TopicFlowListVo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/java/com/lanhu/work/vo/TopicListPageVo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/resources/config/alioss.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/resources/config/http.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/resources/config/redis.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/resources/config/redission.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/resources/logback.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/resources/mybatis/mappers/AdminUserMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/resources/mybatis/mappers/BusDocumentTemplateMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/resources/mybatis/mappers/CaptchaMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/resources/mybatis/mappers/CategoryMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/resources/mybatis/mappers/CommentMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/resources/mybatis/mappers/DeptMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/resources/mybatis/mappers/LocationsMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/resources/mybatis/mappers/TopicFlowsMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/resources/mybatis/mappers/TopicMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/resources/mybatis/mappers/UploadFileConfigMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/resources/mybatis/mappers/UserAccessLogMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/resources/mybatis/mappers/UserMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/resources/mybatis/mybatis-config.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/main/resources/static/readMe.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/test/java/com/lanhu/work/HttpUtilsTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/test/java/com/lanhu/work/OSSHelperServiceTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../temp/work-master/src/test/java/com/lanhu/work/WorkTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/product/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../incubator-springcloud/springcloud-demo/product/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/demos.js" beforeDir="false" afterPath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/demos.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/jqxbuttons.js" beforeDir="false" afterPath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/jqxbuttons.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/jqxcheckbox.js" beforeDir="false" afterPath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/jqxcheckbox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/jqxcore.js" beforeDir="false" afterPath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/jqxcore.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/jqxdata.js" beforeDir="false" afterPath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/jqxdata.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/jqxdropdownlist.js" beforeDir="false" afterPath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/jqxdropdownlist.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/jqxgrid.edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/jqxgrid.edit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/jqxgrid.js" beforeDir="false" afterPath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/jqxgrid.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/jqxgrid.pager.js" beforeDir="false" afterPath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/jqxgrid.pager.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/jqxgrid.selection.js" beforeDir="false" afterPath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/jqxgrid.selection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/jqxgrid.sort.js" beforeDir="false" afterPath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/jqxgrid.sort.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/jqxlistbox.js" beforeDir="false" afterPath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/jqxlistbox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/jqxmenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/jqxmenu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/jqxscrollbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/jqxscrollbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/products.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/products.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/images/colorpicker/ReadMe.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/images/colorpicker/ReadMe.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/images/darkness/ReadMe.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/images/darkness/ReadMe.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/images/le-frog/ReadMe.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/images/le-frog/ReadMe.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/images/lightness/ReadMe.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/images/lightness/ReadMe.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/images/overcast/ReadMe.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/images/overcast/ReadMe.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/images/redmond/ReadMe.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/images/redmond/ReadMe.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/images/smoothness/ReadMe.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/images/smoothness/ReadMe.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/images/start/ReadMe.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/images/start/ReadMe.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/images/sunny/ReadMe.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/images/sunny/ReadMe.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/jqx.android.css" beforeDir="false" afterPath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/jqx.android.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/jqx.arctic.css" beforeDir="false" afterPath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/jqx.arctic.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/jqx.base.css" beforeDir="false" afterPath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/jqx.base.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/jqx.black.css" beforeDir="false" afterPath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/jqx.black.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/jqx.blackberry.css" beforeDir="false" afterPath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/jqx.blackberry.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/jqx.bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/jqx.bootstrap.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/jqx.classic.css" beforeDir="false" afterPath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/jqx.classic.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/jqx.dark.css" beforeDir="false" afterPath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/jqx.dark.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/jqx.darkblue.css" beforeDir="false" afterPath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/jqx.darkblue.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/jqx.energyblue.css" beforeDir="false" afterPath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/jqx.energyblue.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/jqx.flat.css" beforeDir="false" afterPath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/jqx.flat.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/jqx.fresh.css" beforeDir="false" afterPath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/jqx.fresh.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/jqx.glacier.css" beforeDir="false" afterPath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/jqx.glacier.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/jqx.highcontrast.css" beforeDir="false" afterPath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/jqx.highcontrast.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/jqx.light.css" beforeDir="false" afterPath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/jqx.light.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/jqx.material-green.css" beforeDir="false" afterPath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/jqx.material-green.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/jqx.material-purple.css" beforeDir="false" afterPath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/jqx.material-purple.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/jqx.material.css" beforeDir="false" afterPath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/jqx.material.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/jqx.metro.css" beforeDir="false" afterPath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/jqx.metro.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/jqx.metrodark.css" beforeDir="false" afterPath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/jqx.metrodark.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/jqx.mobile.css" beforeDir="false" afterPath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/jqx.mobile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/jqx.office.css" beforeDir="false" afterPath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/jqx.office.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/jqx.orange.css" beforeDir="false" afterPath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/jqx.orange.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/jqx.shinyblack.css" beforeDir="false" afterPath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/jqx.shinyblack.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/jqx.summer.css" beforeDir="false" afterPath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/jqx.summer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/jqx.ui-darkness.css" beforeDir="false" afterPath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/jqx.ui-darkness.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/jqx.ui-le-frog.css" beforeDir="false" afterPath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/jqx.ui-le-frog.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/jqx.ui-lightness.css" beforeDir="false" afterPath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/jqx.ui-lightness.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/jqx.ui-overcast.css" beforeDir="false" afterPath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/jqx.ui-overcast.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/jqx.ui-redmond.css" beforeDir="false" afterPath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/jqx.ui-redmond.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/jqx.ui-smoothness.css" beforeDir="false" afterPath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/jqx.ui-smoothness.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/jqx.ui-start.css" beforeDir="false" afterPath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/jqx.ui-start.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/jqx.ui-sunny.css" beforeDir="false" afterPath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/jqx.ui-sunny.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/jqx.web.css" beforeDir="false" afterPath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/jqx.web.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/jqx.windowsphone.css" beforeDir="false" afterPath="$PROJECT_DIR$/../mall/src/main/resources/static/jqwidgets/styles/jqx.windowsphone.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -347,50 +106,103 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand />
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="test@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="test@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="test@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="mall: schema" type="c314c289:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="test@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="test: schema" type="c314c289:MysqlImplModel$Schema" />
+      </path>
+    </expand>
     <select />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-334316287">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="8" />
+          <entry key="project.closed" value="26" />
           <entry key="project.open.time.0" value="2" />
-          <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.2" value="1" />
-          <entry key="project.open.time.6" value="1" />
+          <entry key="project.open.time.1" value="8" />
+          <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.2" value="6" />
+          <entry key="project.open.time.3" value="2" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.open.time.6" value="2" />
           <entry key="project.open.time.7" value="3" />
-          <entry key="project.opened" value="8" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="26" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="123" value="1" />
-          <entry key="class" value="4" />
-          <entry key="ftl" value="9" />
-          <entry key="java" value="20" />
-          <entry key="xml" value="1" />
+          <entry key="CustomizeTransactionTest" value="1" />
+          <entry key="class" value="6" />
+          <entry key="css" value="1" />
+          <entry key="ftl" value="11" />
+          <entry key="html" value="1" />
+          <entry key="java" value="48" />
+          <entry key="js" value="1" />
+          <entry key="menu" value="1" />
+          <entry key="pom" value="1" />
+          <entry key="properties" value="1" />
+          <entry key="sql" value="3" />
+          <entry key="test" value="1" />
+          <entry key="test_age" value="1" />
+          <entry key="test_class" value="1" />
+          <entry key="xml" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="4" />
-          <entry key="FTL" value="9" />
-          <entry key="JAVA" value="20" />
+          <entry key="CLASS" value="6" />
+          <entry key="CSS" value="1" />
+          <entry key="Database Element" value="4" />
+          <entry key="FTL" value="11" />
+          <entry key="HTML" value="1" />
+          <entry key="JAVA" value="48" />
+          <entry key="JavaScript" value="1" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="XML" value="1" />
+          <entry key="Properties" value="1" />
+          <entry key="SQL" value="1" />
+          <entry key="Scratch" value="2" />
+          <entry key="UML" value="1" />
+          <entry key="XML" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="ftl" value="188" />
-          <entry key="java" value="512" />
+          <entry key="cell" value="26" />
+          <entry key="ftl" value="269" />
+          <entry key="java" value="1415" />
+          <entry key="properties" value="27" />
+          <entry key="sql" value="196" />
+          <entry key="xml" value="87" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="FTL" value="188" />
-          <entry key="JAVA" value="512" />
+          <entry key="FTL" value="269" />
+          <entry key="JAVA" value="1415" />
+          <entry key="Properties" value="27" />
+          <entry key="SQL" value="132" />
+          <entry key="Scratch" value="90" />
+          <entry key="XML" value="87" />
         </counts>
       </usages-collector>
     </session>
@@ -399,45 +211,39 @@
     <favorites_list name="Study" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/hello/TestController.java">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/08dd8261-139f-4af6-ac75-3c1ab22b12b7/console_3.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
-              <folding>
-                <element signature="method#test#0;class#TestController#0" />
-                <element signature="e#1607#1643#0" />
-                <element signature="method#testRest#0;class#TestController#0" />
-                <element signature="method#testModelAndView#0;class#TestController#0" />
-                <element signature="n#!!doc;n#addDemo#0;n#TestController#0" />
-                <element signature="e#2445#2472#0" />
-                <element signature="method#addDemo#0;class#TestController#0" />
-                <element signature="e#2708#2735#0" />
-                <element signature="method#selDemo#0;class#TestController#0" />
-                <element signature="e#2937#2964#0" />
-                <element signature="method#delDemo#0;class#TestController#0" />
-                <element signature="e#3171#3201#0" />
-                <element signature="method#updateDemo#0;class#TestController#0" />
-                <element signature="n#!!doc;n#h2create#0;n#TestController#0" />
-                <element signature="method#h2create#0;class#TestController#0" />
-                <element signature="method#h2add#0;class#TestController#0" />
-                <element signature="method#h2count#0;class#TestController#0" />
-              </folding>
+            <state relative-caret-position="30">
+              <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/hello/Test.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="216" column="54" selection-start-line="216" selection-start-column="54" selection-end-line="216" selection-end-column="54" />
-              <folding>
-                <element signature="class#runner#0;class#Test#0" />
-                <element signature="class#Student_#0;class#Test#0" />
-                <element signature="method#comparatorTest#0;class#Test#0" />
-              </folding>
+        <entry file="das://08dd8261-139f-4af6-ac75-3c1ab22b12b7/schema/test/table/test">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="das://08dd8261-139f-4af6-ac75-3c1ab22b12b7/schema/test/table/test_class">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="das://08dd8261-139f-4af6-ac75-3c1ab22b12b7/schema/test/table/test_age">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
@@ -451,6 +257,13 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>test</find>
+      <find>-io</find>
+      <find>mysql</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
@@ -460,10 +273,23 @@
         <option value="$PROJECT_DIR$/src/main/java/hello/io/OutToBrowser.java" />
         <option value="$PROJECT_DIR$/src/main/java/hello/GreetingController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/bootstrapdemo.ftl" />
-        <option value="$PROJECT_DIR$/src/main/java/hello/Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/hello/service/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/hello/service/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/hello/TestController.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/08dd8261-139f-4af6-ac75-3c1ab22b12b7/console.sql" />
+        <option value="$USER_HOME$/Desktop/test_menu.sql" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/home.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/hello/Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/hello/io/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/hello/io/seAndUnse.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/hello/mall/Model/Menu.java" />
+        <option value="$PROJECT_DIR$/src/main/java/hello/mall/controller/HomeController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/hello/mall/controller/ManageController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/manage.ftl" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/hello/QrCodeDemo.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/08dd8261-139f-4af6-ac75-3c1ab22b12b7/console_3.sql" />
       </list>
     </option>
   </component>
@@ -475,6 +301,13 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
@@ -495,14 +328,17 @@
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1680" />
-    <option name="height" value="945" />
+    <option name="height" value="1027" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
+      <flattenPackages ProjectPane="false" />
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -521,15 +357,56 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Study" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Study" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Study" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Study" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hello" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Study" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Study" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hello" type="462c0819:PsiDirectoryNode" />
+              <item name="blog" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Study" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Study" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hello" type="462c0819:PsiDirectoryNode" />
+              <item name="cache" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Study" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Study" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hello" type="462c0819:PsiDirectoryNode" />
+              <item name="transaction" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelOrder2" value="2" />
@@ -538,12 +415,18 @@
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="database.console.LAST_STATE" value="true" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="com.zeroturnaround.javarebel.idea.plugin.settings.JRebelSettingsComponent" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/bootstrap" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -557,13 +440,39 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.Application">
+  <component name="RunManager" selected="Application.QrCodeDemo">
+    <configuration name="QrCodeDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="hello.QrCodeDemo" />
+      <module name="Study" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hello.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="hello.Test" />
       <module name="Study" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="hello.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="seAndUnse" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="hello.io.seAndUnse" />
+      <module name="Study" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hello.io.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -607,9 +516,13 @@
       <item itemvalue="Spring Boot.Application" />
       <item itemvalue="Maven.Study [clean]" />
       <item itemvalue="Application.Test" />
+      <item itemvalue="Application.seAndUnse" />
+      <item itemvalue="Application.QrCodeDemo" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.QrCodeDemo" />
+        <item itemvalue="Application.seAndUnse" />
         <item itemvalue="Application.Test" />
         <item itemvalue="Maven.Study [clean]" />
       </list>
@@ -633,16 +546,34 @@
       <workItem from="1538877622882" duration="1088000" />
       <workItem from="1538993276724" duration="740000" />
       <workItem from="1539071882307" duration="1831000" />
+      <workItem from="1539096610102" duration="659000" />
+      <workItem from="1539097628157" duration="1822000" />
+      <workItem from="1539136506469" duration="21000" />
+      <workItem from="1539136535332" duration="851000" />
+      <workItem from="1539137848815" duration="4315000" />
+      <workItem from="1539158441764" duration="1033000" />
+      <workItem from="1539165205909" duration="22000" />
+      <workItem from="1539165282509" duration="415000" />
+      <workItem from="1539225972043" duration="257000" />
+      <workItem from="1539239745717" duration="77000" />
+      <workItem from="1539239893723" duration="361000" />
+      <workItem from="1539240268632" duration="353000" />
+      <workItem from="1539240941598" duration="1573000" />
+      <workItem from="1539249428977" duration="1333000" />
+      <workItem from="1539325131040" duration="1957000" />
+      <workItem from="1539352345336" duration="15000" />
+      <workItem from="1539581955289" duration="486000" />
+      <workItem from="1540453860049" duration="628000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6541000" />
+    <option name="totallyTimeSpent" value="22719000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1680" height="945" extended-state="0" />
+    <frame x="0" y="23" width="1680" height="1027" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.67526376" visible="true" weight="0.2887668" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.67526376" visible="true" weight="0.14652015" />
       <window_info id="Structure" order="1" sideWeight="0.50058615" side_tool="true" weight="0.15934066" />
       <window_info id="Web" order="2" sideWeight="0.50058615" side_tool="true" weight="0.15934066" />
       <window_info id="Designer" order="3" />
@@ -651,26 +582,27 @@
       <window_info id="JRebel" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4993895" weight="0.32942554" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4993895" weight="0.17433155" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Spring" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32959184" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Messages" order="13" weight="0.32942554" />
       <window_info anchor="bottom" id="JRebel Console" order="14" sideWeight="0.50061053" side_tool="true" weight="0.51348186" />
       <window_info anchor="bottom" id="Problems" order="15" />
       <window_info anchor="bottom" id="JRebel Executor" order="16" sideWeight="0.4993895" weight="0.5556858" />
+      <window_info active="true" anchor="bottom" id="Database Console" order="17" visible="true" weight="0.32941177" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.13431014" />
+      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.32417583" />
       <window_info anchor="right" id="Bean Validation" order="5" weight="0.32967034" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="right" id="Maven Projects" order="7" weight="0.21245421" />
@@ -683,214 +615,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/123">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hello/transaction/TestModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hello/io/OutToBrowser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="46" column="4" selection-start-line="46" selection-start-column="4" selection-end-line="46" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/common_template.ftl" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/hello/GreetingController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="20" column="50" selection-start-line="20" selection-start-column="50" selection-end-line="20" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/animateTest.ftl">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/home.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/introduction.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/context.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/main.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/manage.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="50" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/template.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" selection-start-line="5" selection-start-column="4" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/bootstrapdemo.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="70" selection-start-line="4" selection-start-column="70" selection-end-line="4" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hello/abs_interface/ClassHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hello/abs_interface/MehtodHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hello/cache/CacheTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hello/cache/Service.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hello/cookie/CookieTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hello/dto/ResponseDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hello/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="19" column="2" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hello/mall/service/impl/MenuServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hello/mall/dao/MenuDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hello/mall/controller/HomeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hello/mall/controller/ManageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-lang3/3.7/commons-lang3-3.7.jar!/org/apache/commons/lang3/time/DateUtils.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hello/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="13" lean-forward="true" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hello/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="216" column="54" selection-start-line="216" selection-start-column="54" selection-end-line="216" selection-end-column="54" />
-          <folding>
-            <element signature="class#runner#0;class#Test#0" />
-            <element signature="class#Student_#0;class#Test#0" />
-            <element signature="method#comparatorTest#0;class#Test#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/io/PrintWriter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1249">
-          <caret line="307" column="15" selection-start-line="307" selection-start-column="12" selection-end-line="307" selection-end-column="15" />
-          <folding>
-            <element signature="e#15583#15584#0" expanded="true" />
-            <element signature="e#15622#15623#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.16/tomcat-embed-core-8.5.16.jar!/javax/servlet/ServletResponse.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="77">
-          <caret line="11" column="32" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.16/tomcat-embed-core-8.5.16.jar!/javax/servlet/ServletResponseWrapper.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
@@ -902,42 +626,375 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="855">
           <caret line="96" column="39" lean-forward="true" selection-start-line="96" selection-start-column="39" selection-end-line="96" selection-end-column="39" />
-          <folding>
-            <element signature="e#2847#2848#0" expanded="true" />
-            <element signature="e#2883#2884#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/bootstrap/bootstrap.bundle.min.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/bootstrap/bootstrap-grid.min.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hello/TestController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
-          <folding>
-            <element signature="method#test#0;class#TestController#0" />
-            <element signature="e#1607#1643#0" />
-            <element signature="method#testRest#0;class#TestController#0" />
-            <element signature="method#testModelAndView#0;class#TestController#0" />
-            <element signature="n#!!doc;n#addDemo#0;n#TestController#0" />
-            <element signature="e#2445#2472#0" />
-            <element signature="method#addDemo#0;class#TestController#0" />
-            <element signature="e#2708#2735#0" />
-            <element signature="method#selDemo#0;class#TestController#0" />
-            <element signature="e#2937#2964#0" />
-            <element signature="method#delDemo#0;class#TestController#0" />
-            <element signature="e#3171#3201#0" />
-            <element signature="method#updateDemo#0;class#TestController#0" />
-            <element signature="n#!!doc;n#h2create#0;n#TestController#0" />
-            <element signature="method#h2create#0;class#TestController#0" />
-            <element signature="method#h2add#0;class#TestController#0" />
-            <element signature="method#h2count#0;class#TestController#0" />
-          </folding>
+        <state relative-caret-position="300">
+          <caret line="47" column="35" selection-start-line="47" selection-start-column="35" selection-end-line="47" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/08dd8261-139f-4af6-ac75-3c1ab22b12b7/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="2" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/test_menu.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="56" selection-end-line="47" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://08dd8261-139f-4af6-ac75-3c1ab22b12b7/schema/mall/table/menu">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/home.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5850">
+          <caret line="390" column="32" selection-start-line="390" selection-start-column="32" selection-end-line="390" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/lang/Iterable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="71" column="17" selection-start-line="71" selection-start-column="17" selection-end-line="71" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hello/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="45" column="73" selection-start-line="45" selection-start-column="40" selection-end-line="45" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hello/io/OutToBrowser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-parent/1.5.5.RELEASE/spring-boot-starter-parent-1.5.5.RELEASE.pom">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2090">
+          <caret line="20" column="42" lean-forward="true" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hello/io/seAndUnse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="38" column="23" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hello/io/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hello/mall/dao/MenuDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hello/mall/Model/Menu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="16" selection-end-line="3" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hello/ioc/context/ApplicationContextTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hello/ioc/context/ServletContextTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hello/ioc/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hello/listener/StartListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="13" column="57" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hello/listener/TestListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hello/temp/CommonUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hello/temp/Hitana.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hello/temp/JedisPoolUtils.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hello/temp/MyFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hello/mall/controller/HomeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hello/mall/controller/ManageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="27" column="19" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/google/zxing/core/3.3.0/core-3.3.0.jar!/com/google/zxing/BarcodeFormat.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/google/zxing/core/3.3.0/core-3.3.0.jar!/com/google/zxing/MultiFormatWriter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="24" column="11" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="166" column="12" selection-start-line="166" selection-start-column="12" selection-end-line="166" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hello/QrCodeDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="31" column="55" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/manage.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hello/temp/MyHttpSessionLisner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hello/temp/RizaHawkeye.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hello/temp/Test2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hello/temp/TestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hello/temp/TestServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext-ioc.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hello/cache/CacheTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hello/blog/Article.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/hello.transaction.CustomizeTransactionTest">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>hello.transaction.CustomizeTransactionTest</OriginalElement>
+          <nodes>
+            <node x="" y="">hello.transaction.TransTest</node>
+            <node x="" y="">hello.transaction.CustomizeTransactionTest.MyProxyTransactionManagementConfiguration</node>
+            <node x="" y="">hello.transaction.CustomizeTransactionTest.MyTransactionInterceptor</node>
+            <node x="" y="">hello.transaction.MyTransactional</node>
+            <node x="" y="">hello.transaction.CustomizeTransactionTest</node>
+            <node x="" y="">hello.transaction.TestModel</node>
+            <node x="" y="">hello.transaction.CustomizeTransactionTest.MySpringTransactionAnnotationParser</node>
+            <node x="" y="">hello.transaction.TransactionTest</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="267.0" y="422.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hello/transaction/CustomizeTransactionTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="75" column="19" selection-start-line="75" selection-start-column="19" selection-end-line="75" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext-aop.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="das://08dd8261-139f-4af6-ac75-3c1ab22b12b7/schema/test/table/test">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://08dd8261-139f-4af6-ac75-3c1ab22b12b7/schema/test/table/test_age">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://08dd8261-139f-4af6-ac75-3c1ab22b12b7/schema/test/table/test_class">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/08dd8261-139f-4af6-ac75-3c1ab22b12b7/console_3.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
         </state>
       </provider>
     </entry>
   </component>
   <component name="masterDetails">
     <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>Study:war</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
           <splitter-proportions>
@@ -961,6 +1018,18 @@
           </splitter-proportions>
         </settings>
       </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>Web|Study</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
       <state key="ProjectJDKs.UI">
         <settings>
           <last-edited>1.8</last-edited>
@@ -975,6 +1044,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
+          <last-edited>Maven: c3p0:c3p0:0.9.1.1</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
