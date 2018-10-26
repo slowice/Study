@@ -43,7 +43,13 @@ public class Test {
         Set<Integer> s2 = new HashSet<>(Arrays.asList(3,5,6));
         s1.retainAll(s2);
         System.out.println(s1);*/
-        Runtime.getRuntime().exec("open /Users/xubin/Applications/123.txt");
+        //Runtime.getRuntime().exec("open /Users/xubin/Applications/123.txt");
+
+        String arr = "1";
+        List list = Arrays.asList(arr.split(","));
+        System.out.println(list);
+
+
     }
 
     private static class runner implements Runnable {
