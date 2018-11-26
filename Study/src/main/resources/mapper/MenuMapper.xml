@@ -25,4 +25,56 @@
         </if>
     </select>
 
+    <select id="findOnlyStoreLi" resultMap="BaseResultMap" parameterType="java.util.Map" >
+        select *
+        from menu
+        where 1=1
+
+        <choose>
+            <when test="name=='abg'">
+                AND name = 0
+                AND pid = 'all'
+            </when>
+            <when test="name=='1'">
+                AND name = 1
+                AND pid = #{pid}
+            </when>
+            <when test="name=='2'">
+                AND name = 2
+                AND pid = #{areaCode}
+            </when>
+            <otherwise>
+                AND name = 3
+                AND pid = 0
+            </otherwise>
+        </choose>
+
+        limit 1
+    </select>
+<!--zh注意关键词-->
+    <select id="findOnlyStoreLi2" resultMap="BaseResultMap" parameterType="java.util.Map" >
+        select
+*        from menu
+        where 1=1
+        AND name = #{name,jdbcType=VARCHAR}
+        <choose>
+            <when test="name=='abg'">
+                AND pid = 'all'
+            </when>
+            <when test="name=='1'">
+
+                AND pid = #{pid}
+            </when>
+            <when test="name=='2'">
+
+                AND pid = #{pid}
+            </when>
+            <otherwise>
+
+                AND pid =0
+            </otherwise>
+        </choose>
+
+        limit 1
+    </select>
 </mapper>

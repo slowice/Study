@@ -1,87 +1,54 @@
+<!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
-<nav class="col-md-2 d-none d-md-block bg-light sidebar">
-    <div class="sidebar-sticky">
-        <ul class="nav flex-column">
-            <li class="nav-item" id="order">
-                <a class="nav-link active" href="/mall/manage/order">
-                    <span data-feather="file"></span>
-                    Orders
-                </a>
-            </li>
-            <li class="nav-item" id="product">
-                <a class="nav-link" href="/mall/manage/product">
-                    <span data-feather="shopping-cart"></span>
-                    产品设置
-                </a>
-            </li>
-            <li class="nav-item" id="customer">
-                <a class="nav-link" href="#">
-                    <span data-feather="users"></span>
-                    Customers
-                </a>
-            </li>
-            <li class="nav-item" id="reports">
-                <a class="nav-link" href="#">
-                    <span data-feather="bar-chart-2"></span>
-                    Reports
-                </a>
-            </li>
-            <li class="nav-item" id="itegration">
-                <a class="nav-link" href="#">
-                    <span data-feather="layers"></span>
-                    Integrations
-                </a>
-            </li>
-        </ul>
+<head>
+    <meta charset="UTF-8">
 
-        <!--<h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">-->
-            <!--<span>Saved reports</span>-->
-            <!--<a class="d-flex align-items-center text-muted" href="#">-->
-                <!--<span data-feather="plus-circle"></span>-->
-            <!--</a>-->
-        <!--</h6>-->
-        <!--<ul class="nav flex-column mb-2">-->
-            <!--<li class="nav-item">-->
-                <!--<a class="nav-link" href="#">-->
-                    <!--<span data-feather="file-text"></span>-->
-                    <!--Current month-->
-                <!--</a>-->
-            <!--</li>-->
-            <!--<li class="nav-item">-->
-                <!--<a class="nav-link" href="#">-->
-                    <!--<span data-feather="file-text"></span>-->
-                    <!--Last quarter-->
-                <!--</a>-->
-            <!--</li>-->
-            <!--<li class="nav-item">-->
-                <!--<a class="nav-link" href="#">-->
-                    <!--<span data-feather="file-text"></span>-->
-                    <!--Social engagement-->
-                <!--</a>-->
-            <!--</li>-->
-            <!--<li class="nav-item">-->
-                <!--<a class="nav-link" href="#">-->
-                    <!--<span data-feather="file-text"></span>-->
-                    <!--Year-end sale-->
-                <!--</a>-->
-            <!--</li>-->
-        <!--</ul>-->
+</head>
+<body>
+<!--log-->
+<div class="sidebar-header">
+    <div class="logo">
+        <a th:href="index.html"><img th:src="@{/assets/images/icon/logo.png}" alt="logo"></a>
     </div>
-</nav>
-<script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
-<script>
-    feather.replace()
-</script>
+</div>
+<!--菜单-->
+<div class="main-menu">
+    <div class="menu-inner">
+        <nav>
+            <ul class="metismenu" id="menu">
+                <li id="product">
+                    <a href="javascript:void(0)" aria-expanded="true"><i class="ti-dashboard"></i><span>产品设置</span></a>
+                    <ul class="collapse">
+                        <li id="autoParts"><a th:href="@{/manage/product/autoParts}">汽配</a></li>
+                        <li id="blueSpeaker"><a th:href="@{/manage/product/blueSpeaker}">蓝牙音箱</a></li>
+                        <li id="toy"><a th:href="@{/manage/product/toy}">儿童玩具</a></li>
+                    </ul>
+                </li>
+
+                <li id="homepage">
+                    <a href="javascript:void(0)" aria-expanded="true"><i class="ti-dashboard"></i><span>首页配置</span></a>
+                    <ul class="collapse">
+                        <li id="1"><a th:href="@{/manage/homepage/features}">特色产品</a></li>
+                    </ul>
+                </li>
+
+                <li id="order">
+                    <a href="javascript:void(0)" aria-expanded="true"><i class="ti-layout-sidebar-left"></i><span>订单管理</span></a>
+                    <ul class="collapse">
+                        <li><a th:href="index.html">查看订单</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
 <script th:inline="javascript">
-    var message = [[${menu}]];
-    if('product' == message){
-        var brothers = $('#product').siblings();
-        $.each(brothers,function (index,value) {
-            $(value).find('a').removeClass('active')
-            console.log($(value))
-        })
-        //$('#order a').removeClass('active');
-        $('#product a').addClass('active');
-    }
+    var menuId = [[${menuId}]];
+    var menuPid = [[${menuPid}]];
+    window.onload = function() {
+        $('#'+menuPid).find('a').trigger('click');
+        $('#'+menuId).addClass('active');
+    };
 </script>
+</body>
 </html>

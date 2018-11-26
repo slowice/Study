@@ -44,8 +44,10 @@ public class    ManageController {
 
     @RequestMapping("/mall/manage/getSMenu")
     @ResponseBody
-    public List<Menu> getSMenu(@RequestParam("id")String id){
-        List<Menu> sMenuList = menuService.selectSMenu(id);
-        return sMenuList;
+    public List<Menu> getSMenu(){
+       // List<Menu> sMenuList = menuService.selectSMenu(id);
+       //return sMenuList;
+        List<Menu> list = menuService.test();
+        return list;
     }
 }

@@ -6,23 +6,27 @@
     <meta name="description" content="JavaScript Grid with rich support for Data Filtering, Paging, Editing, Sorting and Grouping" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1 minimum-scale=1" />
-    <link rel="stylesheet" th:href="@{/jqwidgets/styles/jqx.base.css}" type="text/css" />
-    <script type="text/javascript" th:src="@{/jqwidgets/jqxcore.js}"></script>
-    <script type="text/javascript" th:src="@{/jqwidgets/jqxdata.js}"></script>
-    <script type="text/javascript" th:src="@{/jqwidgets/jqxbuttons.js}"></script>
-    <script type="text/javascript" th:src="@{/jqwidgets/jqxscrollbar.js}"></script>
-    <script type="text/javascript" th:src="@{/jqwidgets/jqxmenu.js}"></script>
-    <script type="text/javascript" th:src="@{/jqwidgets/jqxcheckbox.js}"></script>
-    <script type="text/javascript" th:src="@{/jqwidgets/jqxlistbox.js}"></script>
-    <script type="text/javascript" th:src="@{/jqwidgets/jqxdropdownlist.js}"></script>
-    <script type="text/javascript" th:src="@{/jqwidgets/jqxgrid.js}"></script>
-    <script type="text/javascript" th:src="@{/jqwidgets/jqxgrid.sort.js}"></script>
-    <script type="text/javascript" th:src="@{/jqwidgets/jqxgrid.pager.js}"></script>
-    <script type="text/javascript" th:src="@{/jqwidgets/jqxgrid.selection.js}"></script>
-    <script type="text/javascript" th:src="@{/jqwidgets/jqxgrid.edit.js}"></script>
+    <link rel="stylesheet" th:href="@{/assets/jqwidgets/styles/jqx.base.css}" type="text/css"/>
+    <script type="text/javascript" th:src="@{/assets/jqwidgets/jqxcore.js}"></script>
+    <script type="text/javascript" th:src="@{/assets/jqwidgets/jqxdata.js}"></script>
+    <script type="text/javascript" th:src="@{/assets/jqwidgets/jqxbuttons.js}"></script>
+    <script type="text/javascript" th:src="@{/assets/jqwidgets/jqxscrollbar.js}"></script>
+    <script type="text/javascript" th:src="@{/assets/jqwidgets/jqxmenu.js}"></script>
+    <script type="text/javascript" th:src="@{/assets/jqwidgets/jqxcheckbox.js}"></script>
+    <script type="text/javascript" th:src="@{/assets/jqwidgets/jqxlistbox.js}"></script>
+    <script type="text/javascript" th:src="@{/assets/jqwidgets/jqxdropdownlist.js}"></script>
+    <script type="text/javascript" th:src="@{/assets/jqwidgets/jqxgrid.js}"></script>
+    <script type="text/javascript" th:src="@{/assets/jqwidgets/jqxgrid.sort.js}"></script>
+    <script type="text/javascript" th:src="@{/assets/jqwidgets/jqxgrid.pager.js}"></script>
+    <script type="text/javascript" th:src="@{/assets/jqwidgets/jqxgrid.selection.js}"></script>
+    <script type="text/javascript" th:src="@{/assets/jqwidgets/jqxgrid.edit.js}"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-            var url =  "[[@{/product/getProductInfos}]]";
+            var productCategoryName = "[[${menuId}]]";
+
+            var url =  "[[@{/product/getProductInfoListByCategoryName}]]";
+            //var url =  "/product/getProductInfoList?categoryName=" + productCategoryName;
+
             // prepare the data
             var source = {
                 datatype: 'json',
@@ -44,6 +48,9 @@
                 }],
                 id: 'id',
                 url: url,
+                data:{
+                    "categoryName":productCategoryName
+                },
                 type: 'POST',
                 async: true
             };
@@ -55,6 +62,15 @@
                     return '<span style="margin: 4px; margin-top:8px; float: ' + columnproperties.cellsalign + '; color: #008000;">' + value + '</span>';
                 }
             }
+            var updateLink = function (row, columnfield, value, defaulthtml, columnproperties, rowdata) {
+                var link = '<a href="../productdetail?productId='+rowdata.uid+'">修改</a>'
+                return link
+            }
+            var deleteLink = function (row, columnfield, value, defaulthtml, columnproperties, rowdata) {
+
+                var link = '<a href="[[@{/manage/product/delete?productId=}]]'+rowdata.uid+'" style="color: red">删除</a>'
+                return link
+            }
             var dataAdapter = new $.jqx.dataAdapter(source, {
                 downloadComplete: function (data, status, xhr) { },
                 loadComplete: function (data) { },
@@ -62,7 +78,7 @@
             });
             $("#grid").jqxGrid(
                 {
-                    // width: getWidth('Grid'),
+                    width: '100%',
                     source: dataAdapter,
                     pageable: true,
                     autoheight: true,
@@ -70,14 +86,17 @@
                     altrows: true,
                     enabletooltips: true,
                     editable: true,
+
                     selectionmode: 'multiplecellsadvanced',
                     columns: [
-                        { text: 'Product Name', columngroup: 'ProductDetails', datafield: 'name', width: 250 },
-                        { text: 'Product Name', columngroup: 'ProductDetails', datafield: 'price', width: 250 },
-                        { text: 'Product Name', columngroup: 'ProductDetails', datafield: 'description', width: 250 },
-                        { text: 'Quantity per Unit', columngroup: 'ProductDetails', datafield: 'imgPath', cellsalign: 'right', align: 'right', width: 200 },
-                        { text: 'Unit Price', columngroup: 'ProductDetails', datafield: 'UnitPrice', align: 'right', cellsalign: 'right', cellsformat: 'c2', width: 200 },
-                        { text: 'Units In Stock', datafield: 'stock', cellsalign: 'right', cellsrenderer: cellsrenderer, width: 100 },
+                        { text: '产品名称', columngroup: 'ProductDetails', datafield: 'name', width: 250 },
+                        { text: '库存', columngroup: 'ProductDetails', datafield: 'stock', width: 250 },
+                        { text: '产品描述', columngroup: 'ProductDetails', datafield: 'description', width: 250 },
+                        { text: '链接', columngroup: 'ProductDetails', datafield: 'imgPath', cellsalign: 'right', align: 'right', width: 200 },
+                        { text: '单价', columngroup: 'ProductDetails', datafield: 'price', align: 'right', cellsalign: 'right', cellsformat: 'c2', width: 200 },
+                        // { text: '库存', datafield: 'stock', cellsalign: 'right', cellsrenderer: cellsrenderer,width: 100},
+                        { text: '详情',   cellsrenderer: updateLink},
+                        { text: '删除',  cellsalign: 'right', cellsrenderer: deleteLink}
                     ],
                     columngroups: [
                         { text: 'Product Details', align: 'center', name: 'ProductDetails' }
@@ -87,7 +106,12 @@
     </script>
 </head>
 <body>
-    <div id="grid" th:fragment="aaa">
+    <div>
+        <a  class="btn btn-outline-secondary mb-3" th:href="@{/manage/productdetail}">新增产品</a>
+        <button type="button" class="btn btn-outline-secondary mb-3">新增产品分类</button>
+    </div>
+
+    <div id="grid">
     </div>
 </body>
 </html>

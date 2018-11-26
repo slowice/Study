@@ -1,6 +1,5 @@
 package hello.io;
 
-import org.apache.commons.io.serialization.ValidatingObjectInputStream;
 
 import java.io.*;
 
@@ -26,17 +25,17 @@ public class seAndUnse {
     private static void input() throws IOException, ClassNotFoundException {
         FileInputStream fileInputStream = new FileInputStream("/Users/xubin/Applications/user");
 
-        ValidatingObjectInputStream inputStream = new ValidatingObjectInputStream(fileInputStream);
+        //ValidatingObjectInputStream inputStream = new ValidatingObjectInputStream(fileInputStream);
         //inputStream.reject(User.class);
-        inputStream.accept(Serializable.class);
+       // inputStream.accept(Serializable.class);
 
 
         //ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
 
-        Object o= (Serializable) inputStream.readObject();
+       // Object o= (Serializable) inputStream.readObject();
         User user = new User();
 
-        user = (User)o;
+       // user = (User)o;
         System.out.println(user.getName());
     }
 

@@ -23,6 +23,7 @@ public class Test {
         Service service = (Service) enhancer.create();
         service.request();
     }
+
     public static void main(String[] args) {
         cglibProxyTest();
     }

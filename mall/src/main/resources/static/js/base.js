@@ -1,4 +1,0 @@
-
-function initMenu() {
-    var menu =
-}

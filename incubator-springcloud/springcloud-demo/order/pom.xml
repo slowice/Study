@@ -63,6 +63,11 @@
             <groupId>org.springframwork.cloud</groupId>
             <artifactId>spring-cloud-starter-steam-reabbit</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+        </dependency>
     </dependencies>
 
 </project>

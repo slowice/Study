@@ -13,8 +13,9 @@ import java.util.List;
 public class TestServiceImpl implements TestService {
     @Autowired
     private TestMapper testMapper;
+
     @Override
-    public Test selectOne(String id) {
+    public Test selectOne(Integer id) {
         return testMapper.selectByPrimaryKey(id);
     }
 

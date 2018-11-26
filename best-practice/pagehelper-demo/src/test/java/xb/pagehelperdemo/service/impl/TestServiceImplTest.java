@@ -15,7 +15,7 @@ public class TestServiceImplTest extends PageHelperDemoApplicationTests {
     private TestService testService;
     @Test
     public void selectOne() {
-        xb.pagehelperdemo.bean.Test test = testService.selectOne("1");
+        xb.pagehelperdemo.bean.Test test = testService.selectOne(1);
         Assert.assertNotNull(test);
     }
 

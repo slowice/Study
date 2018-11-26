@@ -12,7 +12,7 @@ import org.springframework.context.annotation.ImportResource;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @ImportResource("classpath:applicationContext.xml")
-//@MapperScan("hello.dao")
+@MapperScan({"hello.mall.dao","hello.dao"})
 @SpringBootApplication
 @EnableTransactionManagement//会注入InfrastructureAdvisorAutoProxyCreator,BeanFactoryTransactionAttributeSourceAdvisor
 public class Application extends SpringBootServletInitializer {

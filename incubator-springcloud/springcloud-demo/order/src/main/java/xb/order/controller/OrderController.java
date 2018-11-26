@@ -5,10 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.CollectionUtils;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import xb.order.VO.ResultVO;
 import xb.order.client.ProductClient;
 import xb.order.converter.OrderForm2OrderDTO;
@@ -36,7 +33,7 @@ public class OrderController {
     private OrderService orderService;
 
     @Autowired
-    ProductClient productClient;
+    private ProductClient productClient;
 
     /*1.参数校验
     2.根据传入的商品ID查询商品信息
@@ -75,5 +72,10 @@ public class OrderController {
     public String decreaseStock() {
         productClient.decreaseStock(Arrays.asList(new CartDTO("8461c072c47911e88118ef302013fbb6", 2)));
         return "ok";
+    }
+
+    @PostMapping("/finish")
+    public ResultVO finish(@RequestParam("orderId") String orderId){
+        return ResultVOUtil.success(orderService.finishi(orderId));
     }
 }

@@ -29,6 +29,26 @@ spring:
         output:
           destination: mqTestDefault
           contentType: text/plain
+#IDEA报错，但是实际会生效
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 4000
+##利用@HystrixCommand注解的commandKey属性，给某一方法单独配置。commandKey默认值为方法名
+    getProductInfoList:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 2000
+feign:
+  hystrix:
+    enabled: true
+
+
+
 #这个配置不要放在配置中心，因为如果不用默认端口的话，就无法通过eureka来访问配置中心的服务
 eureka:
   client:

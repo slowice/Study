@@ -1,26 +1,64 @@
 <!doctype html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html class="no-js" lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>Dashboard Template for Bootstrap</title>
-    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" />
-    <link th:href="@{/css/dashboard.css}" rel="stylesheet" />
-    <script type="text/javascript" th:src="@{/js/jquery-3.2.1.js}"></script>
-    <script th:src="@{/js/bootstrap.min.js}"></script>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Table Basic - srtdash</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" th:href="@{/assets/images/icon/favicon.ico}">
+    <link rel="stylesheet" th:href="@{/assets/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/assets/css/font-awesome.min.css}">
+    <link rel="stylesheet" th:href="@{/assets/css/themify-icons.css}">
+    <link rel="stylesheet" th:href="@{/assets/css/metisMenu.css}">
+    <link rel="stylesheet" th:href="@{/assets/css/owl.carousel.min.css}">
+    <link rel="stylesheet" th:href="@{/assets/css/slicknav.min.css}">
+    <!-- amchart css -->
+    <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+    <!-- others css -->
+    <link rel="stylesheet" th:href="@{/assets/css/typography.css}">
+    <link rel="stylesheet" th:href="@{/assets/css/default-css.css}">
+    <link rel="stylesheet" th:href="@{/assets/css/styles.css}">
+    <link rel="stylesheet" th:href="@{/assets/css/responsive.css}">
+    <!-- modernizr css -->
+    <script th:src="@{/assets/js/vendor/modernizr-2.8.3.min.js}"></script>
+    <script th:src="@{/assets/js/vendor/jquery-2.2.4.min.js}"></script>
 </head>
+
 <body>
-<div th:replace="/component/base/navbar :: html"></div>
-<div class="container-fluid">
-    <div class="row">
-        <div th:replace="/component/base/menu :: html"></div>
-        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-            <div th:replace="/component/product/productlist :: html"></div>
-        </main>
+
+    <div class="page-container">
+
+        <!--  菜单 -->
+        <div class="sidebar-menu">
+            <div th:replace="/component/base/menu :: html"></div>
+        </div>
+
+        <!--主体-->
+        <div class="main-content">
+            <!--头部-->
+            <div th:replace="/component/base/header :: html"></div>
+
+            <!--核心-->
+            <div class="main-content-inner">
+              <div class="row">
+                  <div class="col-lg-12 mt-3">
+                      <div th:replace="/component/product/productlist :: html"></div>
+                  </div>
+              </div>
+            </div>
+        </div>
+
+        <!--尾部-->
+        <div th:replace="/component/base/footer :: html"></div>
+
     </div>
-</div>
+
+    <!--隐藏的侧栏设置-->
+    <div th:replace="/component/base/offset :: html"></div>
+
+    <!--静态文件-->
+    <div th:replace="/component/base/statisc :: html"></div>
 </body>
+
 </html>

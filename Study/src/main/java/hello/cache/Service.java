@@ -1,6 +1,6 @@
 package hello.cache;
 
-@org.springframework.stereotype.Service
+
 public class Service {
 
     public static void main(String[] args) {

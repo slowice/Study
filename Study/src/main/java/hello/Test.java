@@ -21,7 +21,31 @@ import java.util.*;
 
 
 public class Test {
+    private static class A{
+        private String id;
+        private Integer num;
 
+        public Integer getNum() {
+            return num;
+        }
+
+        public void setNum(Integer num) {
+            this.num = num;
+        }
+
+        public String getId() {
+            return id;
+        }
+
+        public void setId(String id) {
+            this.id = id;
+        }
+
+        A(String id,Integer num){
+            this.id = id;
+            this.num = num;
+        }
+    }
     public static void main(String[] args) throws Exception {
         /*File otherBank  = new File("E://otherBank.txt");
         String logs = "执行了他行扫描";
@@ -45,9 +69,12 @@ public class Test {
         System.out.println(s1);*/
         //Runtime.getRuntime().exec("open /Users/xubin/Applications/123.txt");
 
-        String arr = "1";
-        List list = Arrays.asList(arr.split(","));
-        System.out.println(list);
+        //long  a = 10L;
+        //System.out.println(a/2);
+        List<String> list = new ArrayList<>();
+        while (true){
+            list.add("aaa");
+        }
 
 
     }

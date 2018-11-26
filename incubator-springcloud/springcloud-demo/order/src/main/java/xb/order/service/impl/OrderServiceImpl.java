@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.CollectionUtils;
 import xb.order.client.ProductClient;
 import xb.order.dataobject.OrderDetail;
 import xb.order.dataobject.OrderMaster;
@@ -12,6 +13,8 @@ import xb.order.dto.CartDTO;
 import xb.order.dto.OrderDTO;
 import xb.order.enums.OrderStatus;
 import xb.order.enums.PayStatus;
+import xb.order.enums.ResultEnum;
+import xb.order.exception.OrderException;
 import xb.order.repository.OrderDetailRepository;
 import xb.order.repository.OrderMasterRepository;
 import xb.order.service.OrderService;
@@ -20,6 +23,7 @@ import xb.order.utils.KeyUtil;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -77,6 +81,33 @@ public class OrderServiceImpl implements OrderService {
         orderMaster.setOrderStatus(OrderStatus.NEW.getCode());
         orderMaster.setPayStatus(PayStatus.WAIT.getCode());
         orderMasterRepository.save(orderMaster);
+
+        return orderDTO;
+    }
+
+    @Override
+    public OrderDTO finishi(String orderId) {
+        //校验订单是否存在
+        Optional<OrderMaster> orderMasterOptional = orderMasterRepository.findById(orderId);
+        if(!orderMasterOptional.isPresent()){
+            throw new OrderException(ResultEnum.PARAM_ERROR);
+        }
+        //判断订单状态
+        OrderMaster orderMaster = orderMasterOptional.get();
+        if(!OrderStatus.NEW.getCode().equals(orderMaster.getOrderStatus())){
+            throw new OrderException(ResultEnum.ORDER_STATUS_ERROR);
+        }
+        //修改订单状态为已完结
+        orderMaster.setOrderStatus(OrderStatus.FINISH.getCode());
+        orderMasterRepository.save(orderMaster);
+        //查询订单详情
+        List<OrderDetail> orderDetailList = orderDetailRepository.findByOrderId(orderId);
+        if(CollectionUtils.isEmpty(orderDetailList)){
+            throw new OrderException(ResultEnum.ORDER_DETAIL_NOT_EXIST);
+        }
+        OrderDTO orderDTO = new OrderDTO();
+        BeanUtils.copyProperties(orderMaster,orderDTO);
+        orderDTO.setOrderDetailList(orderDetailList);
 
         return orderDTO;
     }

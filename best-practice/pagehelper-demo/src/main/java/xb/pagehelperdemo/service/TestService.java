@@ -5,6 +5,6 @@ import xb.pagehelperdemo.bean.Test;
 import java.util.List;
 
 public interface TestService {
-    Test selectOne(String id);
+    Test selectOne(Integer id);
     List<Test> selectAll();
 }

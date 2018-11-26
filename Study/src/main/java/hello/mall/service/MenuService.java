@@ -10,4 +10,6 @@ public interface MenuService {
 
     //查询二级菜单 byIndex
     List<Menu> selectSMenu(String id);
+
+    List<Menu> test();
 }
