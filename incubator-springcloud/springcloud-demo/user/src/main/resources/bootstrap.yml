@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: user
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: CONFIG
+      profile: dev
+#这个配置不要放在配置中心，因为如果不用默认端口的话，就无法通过eureka来访问配置中心的服务
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+server:
+  port: 8083

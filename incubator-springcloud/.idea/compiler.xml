@@ -13,6 +13,7 @@
         <module name="eureka_server" />
         <module name="order" />
         <module name="product" />
+        <module name="user" />
       </profile>
     </annotationProcessing>
   </component>

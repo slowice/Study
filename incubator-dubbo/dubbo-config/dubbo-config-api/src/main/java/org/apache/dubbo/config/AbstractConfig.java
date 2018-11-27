@@ -156,6 +156,11 @@ public abstract class AbstractConfig implements Serializable {
         }
     }
 
+    /**
+     * 获得类名，如果类以Config或者Bean结尾，则获得前面的
+     * @param cls
+     * @return
+     */
     private static String getTagName(Class<?> cls) {
         String tag = cls.getSimpleName();
         for (String suffix : SUFFIXES) {
