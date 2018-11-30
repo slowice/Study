@@ -2,14 +2,13 @@ package xb.data_process_demo.controller;
 
 import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import lombok.Data;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+import xb.data_process_demo.bean.Person;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 @Controller
 public class TestController {
@@ -47,9 +46,4 @@ public class TestController {
         return "123";
     }
 
-    @Data
-    private static class Person{
-        private String id;
-        private String name;
-    }
 }

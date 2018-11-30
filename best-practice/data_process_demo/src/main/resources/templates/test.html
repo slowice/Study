@@ -5,6 +5,7 @@
     <title>Title</title>
     <script type="text/javascript" th:src="@{/jquery-2.2.4.min.js}" ></script>
     <script type="text/javascript" >
+        //字符串数组上传
         function simpleArr() {
             var data = ["1","2","3"]
             $.ajax({
@@ -17,6 +18,8 @@
             })
         }
 
+
+        //对象数组上传
         var person1 = new Object();
         person1.id="1"
         person1.name="a"
