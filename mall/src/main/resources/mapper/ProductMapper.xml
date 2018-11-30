@@ -15,6 +15,18 @@
     from product_info info,product_category category where info.category_id=category.id and category.category_name = #{categorytName,jdbcType=VARCHAR}
   </select>
 
+    <select id="getAll" resultType="xb.mall.bean.responseObj.ProductInfoReponse">
+        select info.id as id,
+               info.name as name,
+               info.stock as stock,
+               info.img_path as imgPath,
+               info.price as price,
+               info.description as description,
+               category.category_name as categoryName,
+               category.id as categoryId
+        from product_info info,product_category category where info.category_id=category.id
+    </select>
+
     <!--通过产品集合查询所有产品-->
     <select id="getProductListByCollectionId" parameterType="String" resultType="xb.mall.bean.ProductInfo">
         select info.id as id,
@@ -44,11 +56,14 @@
     </select>
 
     <!--添加产品集合-->
-    <insert id="addProductCollectionRelation" >
-      insert into product_collection_relation (product_id,collection_id) values (#{productId},#{collectionId})
+    <insert id="addProductCollectionRelationBatch" >
+      insert into product_collection_relation (product_id,collection_id) values
+        <foreach collection ="productIdList" item="productId" separator =",">
+            (#{productId}, #{collectionId})
+        </foreach >
     </insert>
 
     <delete id="deleteProductCollectionRelation">
-        delete from product_collection_relation relation where relation.product_id=#{productId} and relation.collectionId=#{collectionId}
+        delete from product_collection_relation where product_id=#{productId} and collection_id=#{collectionId}
     </delete>
 </mapper>

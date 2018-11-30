@@ -14,63 +14,13 @@
 		
 		<!-- header -->
 		<header class="header">
-			
-			<!-- header top -->
-			<div class="header-top">
-				<div class="container">
-					<div class="row">
-						<div class="col-sm-3">
-							<ul class="list-inline">
-								<li>
-									<div class="dropdown">
-										<a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img  th:src="@{/frontend/images/is.png}" alt="" /> English <i class="fa fa-angle-down"></i></a>
-										<ul class="dropdown-menu">
-											<li><a href="#">Japani</a></li>
-											<li><a href="#">Hindi</a></li>
-											<li><a href="#">Chinis</a></li>
-										</ul>
-									</div>
-								</li>
-								<li>
-									<div class="dropdown">
-										<a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Currency $USD <i class="fa fa-angle-down"></i></a>
-										<ul class="dropdown-menu">
-											<li><a href="#">Pound</a></li>
-											<li><a href="#">Diner</a></li>
-											<li><a href="#">Rupee</a></li>
-										</ul>
-									</div>
-								</li>
-							</ul>
-						</div>
-						<div class="col-sm-4">
-							<ul class="list-inline">
-								<li><a href="#" ><i class="fa fa-mobile"></i> +88018374345</a></li>
-								<li><a href="#" ><i class="fa fa-envelope-o"></i> example@gmail.com</a></li>
-							</ul>	
-						</div>
-						<div class="col-sm-5">
-							<ul class="list-inline pull-right">
-								<li><a href="#" ><i class="fa fa-user"></i> My Account</a></li>
-								<li><a href="#" ><i class="fa fa-heart-o"></i> Wishlist (0)</a></li>
-								<li><a href="#" ><i class="fa fa-file-o"></i> Compare (0)</a></li>
-								<li><a class="register" href="#" >Register</a></li>
-							</ul>	
-						</div>	
-					</div>	
-				</div>
-			</div>
-			
+
 			<!-- logo and adds -->
 			<div class="logo-add">
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-4">
-							<div class="logo"><i class="fa fa-diamond"></i>E - Market</div>
-						</div>
-						<div class="col-sm-8">
-							<h3 class="add bb-year-end-ribbon hidden-xs"><img th:src="@{/frontend/images/red-tablet.png}" width="40px;" alt="" />
-							<span>Hi! We Can <span>Help</span> Your Business</span> <button class="btn btn-default"> Get Stared </button></h3>
+							<div class="logo"><i class="fa fa-diamond"></i>惠泽通</div>
 						</div>
 					</div>
 				</div>
@@ -99,33 +49,25 @@
 											<ul class="dropdown-menu">
 												<li><a href="index.html">Home Page</a></li>
 												<li><a href="index-2.html">Home Page 2</a></li>
-											</ul>	
+											</ul>
 										</li>
 										<li><a href="product-detail.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Shop</a><span class="label label-danger text-center hidden-xs">New <i class="fa fa-caret-right"></i></span>
 											<ul class="dropdown-menu">
 												<li><a href="product.html">Products</a></li>
 												<li><a href="product-detail.html">Product Details</a></li>
 												<li><a href="new-product.html">New Products</a></li>
-											</ul>	
+											</ul>
 										</li>
 										<li><a href="faq.html">FAQ</a></li>
-										<li><a href="blog.html">Blog</a></li>
-										<li><a href="blog-details.html">Blog Detail</a></li>
 										<li><a href="about-us.html">About Us</a> <span class="label label-info text-center hidden-xs">New <i class="fa fa-caret-right"></i></span></li>
 										<li><a href="contact-us.html">Contac Us</a></li>
 									</ul>
-									<form class="navbar-form navbar-right" role="search">
-										<div class="form-group">
-											<input type="text" class="form-control" placeholder="Search...">
-											<span class="nav-search"><a href="#"><i class="fa fa-search"></i></a></span>
-										</div>	
-									</form>
 								</div>
 							</div>
 						</nav>
-					</div>	
-				</div>	
-			</div>	
+					</div>
+				</div>
+			</div>
 		</header>	
 		
 		<!-- 轮播图 -->
@@ -262,20 +204,22 @@
 					<div class="col-sm-12">
 						<div class="">
 							<h1><span class="t-color-1">特色</span> 产品
-								<small class="btn-group hidden-xs">
-									<a class=" btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" 
-									   aria-expanded="false">All Categries <i class="fa fa-bars"></i></a>
-									<ul class="dropdown-menu">
-										<li><a href="#">Option 1</a></li>
-										<li><a href="#">Option 2</a></li>
-									</ul>
-								</small>
+								<!--暂时不添加类型过滤-->
+								<!--<small class="btn-group hidden-xs">-->
+									<!--<a class=" btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" -->
+									   <!--aria-expanded="false">All Categries <i class="fa fa-bars"></i></a>-->
+									<!--<ul class="dropdown-menu">-->
+										<!--<li><a href="#">Option 1</a></li>-->
+										<!--<li><a href="#">Option 2</a></li>-->
+									<!--</ul>-->
+								<!--</small>-->
 							</h1>
 							<div class="heading-border b-color-1"></div>
 						</div>
 					</div>
 				</div> <!-- section title -->
 				<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+					<!--翻页按钮-->
 					<ol class="carousel-indicators">
 						<li data-target="#carousel-example-generic" data-slide-to="0" class="active"><i class="fa fa-angle-left"></i></li>
 						<li data-target="#carousel-example-generic" data-slide-to="1"><i class="fa fa-angle-right"></i></li>
@@ -283,105 +227,25 @@
 					<div class="carousel-inner" role="listbox">
 						<div class="item active">
 							<div class="row">
-								<div class="col-sm-3">
+								<div class="col-sm-3" th:each="feature: ${features1}">
 									<div class="thumbnail">
-										<!--span class="e-label"><div>Sale</div></span-->
 										<span class="service-link text-center">
-											<img class="img-responsive" th:src="@{/frontend/images/f-pro-1.jpg}" alt="">
+											<!--产品图片-->
+											<img class="img-responsive" th:src="@{'/product/preview?productId='+${feature.id}}" width="230px" height="187px">
+											<!--产品图片链接-->
 											<div class="list-inline">
 												<a href=""><i class="fa fa-eye"></i></a>
 												<a href=""><i class="fa fa-link"></i></a>
 											</div>
 										</span>
 										<div class="caption">
-											<div class="category"> category
-												<div class="pull-right">
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star-o"></i>
-												</div>
-											</div>
-											<h3>Lorem ipsum dolor sit amet dolorem molestie</h3>
-											<strong>$899.00</strong>
+                                            <div class="category">[[${feature.name}]]</div>
+											<!--产品描述-->
+											<h3 class="description">[[${feature.description}]]</h3>
+											<!--产品价格-->
+											<strong>$[[${feature.price}]]</strong>
+											<!--添加到购物车-->
 											<div><a href="#" class="btn btn-default" role="button">Add to Cart</a><span class="pull-right"><i class="fa fa-heart-o"></i> Add to Wishlist</span></div>
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-3">
-									<div class="thumbnail">
-										<span class="service-link text-center">
-											<img class="img-responsive" th:src="@{/frontend/images/f-pro-1.jpg}" alt="">
-											<div class="list-inline">
-												<a href=""><i class="fa fa-eye"></i></a>
-												<a href=""><i class="fa fa-link"></i></a>
-											</div>
-										</span>
-										<div class="caption">
-											<div class="category"> category
-												<div class="pull-right">
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star-o"></i>
-												</div>
-											</div>
-											<h3>Lorem ipsum dolor sit amet dolorem molestie</h3>
-											<strong>$899.00</strong>
-											<div><a href="#" class="btn btn-default" role="button">Add to Cart</a><span class="pull-right"><i class="fa fa-heart-o"></i> Add to Wishlist</span></div>
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-3">
-									<div class="thumbnail">
-										<span class="service-link text-center">
-											<img class="img-responsive" th:src="@{/frontend/images/f-pro-1.jpg}" alt="">
-											<div class="list-inline">
-												<a href=""><i class="fa fa-eye"></i></a>
-												<a href=""><i class="fa fa-link"></i></a>
-											</div>
-										</span>
-										<div class="caption">
-											<div class="category"> category
-												<div class="pull-right">
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star-o"></i>
-												</div>
-											</div>
-											<h3>Lorem ipsum dolor sit amet dolorem molestie</h3>
-											<strong>$899.00</strong>
-											<div><a href="#" class="btn btn-default" role="button">Add to Cart</a><span class="pull-right"><i class="fa fa-heart-o"></i> Add to Wishlist</span></div>
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-3">
-									<div class="thumbnail">
-										<span class="service-link text-center">
-											<img class="img-responsive" th:src="@{/frontend/images/f-pro-1.jpg}" alt="">
-											<div class="list-inline">
-												<a href=""><i class="fa fa-eye"></i></a>
-												<a href=""><i class="fa fa-link"></i></a>
-											</div>
-										</span>
-										<div class="caption">
-											<div class="category"> category
-												<div class="pull-right">
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star-o"></i>
-												</div>
-											</div>
-											<h3>Lorem ipsum dolor sit amet dolorem molestie</h3>
-											<strong>$899.00</strong>
-											<div>
-												<a href="#" class="btn btn-default" role="button">Add to Cart</a><span class="pull-right"><i class="fa fa-heart-o"></i> Add to Wishlist</span></div>
 										</div>
 									</div>
 								</div>
@@ -389,108 +253,28 @@
 						</div>
 						<div class="item">
 							<div class="row">
-								<div class="col-sm-3">
-									<div class="thumbnail">
-										<!--span class="e-label"><div>Sale</div></span-->
+                                <div class="col-sm-3" th:each="feature: ${features2}">
+                                    <div class="thumbnail">
 										<span class="service-link text-center">
-											<img class="img-responsive" th:src="@{/frontend/images/f-pro-1.jpg}" alt="">
+											<!--产品图片-->
+											<img class="img-responsive" th:src="@{'/product/preview?productId='+${feature.id}}" width="230px" height="187px">
+                                            <!--产品图片链接-->
 											<div class="list-inline">
 												<a href=""><i class="fa fa-eye"></i></a>
 												<a href=""><i class="fa fa-link"></i></a>
 											</div>
 										</span>
-										<div class="caption">
-											<div class="category"> category
-												<div class="pull-right">
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star-o"></i>
-												</div>
-											</div>
-											<h3>Lorem ipsum dolor sit amet dolorem molestie</h3>
-											<strong>$899.00</strong>
-											<div><a href="#" class="btn btn-default" role="button">Add to Cart</a><span class="pull-right"><i class="fa fa-heart-o"></i> Add to Wishlist</span></div>
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-3">
-									<div class="thumbnail">
-										<span class="service-link text-center">
-											<img class="img-responsive" th:src="@{/frontend/images/f-pro-1.jpg}" alt="">
-											<div class="list-inline">
-												<a href=""><i class="fa fa-eye"></i></a>
-												<a href=""><i class="fa fa-link"></i></a>
-											</div>
-										</span>
-										<div class="caption">
-											<div class="category"> category
-												<div class="pull-right">
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star-o"></i>
-												</div>
-											</div>
-											<h3>Lorem ipsum dolor sit amet dolorem molestie</h3>
-											<strong>$899.00</strong>
-											<div><a href="#" class="btn btn-default" role="button">Add to Cart</a><span class="pull-right"><i class="fa fa-heart-o"></i> Add to Wishlist</span></div>
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-3">
-									<div class="thumbnail">
-										<span class="service-link text-center">
-											<img class="img-responsive" th:src="@{/frontend/images/f-pro-1.jpg}" alt="">
-											<div class="list-inline">
-												<a href=""><i class="fa fa-eye"></i></a>
-												<a href=""><i class="fa fa-link"></i></a>
-											</div>
-										</span>
-										<div class="caption">
-											<div class="category"> category
-												<div class="pull-right">
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star-o"></i>
-												</div>
-											</div>
-											<h3>Lorem ipsum dolor sit amet dolorem molestie</h3>
-											<strong>$899.00</strong>
-											<div><a href="#" class="btn btn-default" role="button">Add to Cart</a><span class="pull-right"><i class="fa fa-heart-o"></i> Add to Wishlist</span></div>
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-3">
-									<div class="thumbnail">
-										<span class="service-link text-center">
-											<img class="img-responsive" th:src="@{/frontend/images/f-pro-1.jpg}" alt="">
-											<div class="list-inline">
-												<a href=""><i class="fa fa-eye"></i></a>
-												<a href=""><i class="fa fa-link"></i></a>
-											</div>
-										</span>
-										<div class="caption">
-											<div class="category"> category
-												<div class="pull-right">
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star-o"></i>
-												</div>
-											</div>
-											<h3>Lorem ipsum dolor sit amet dolorem molestie</h3>
-											<strong>$899.00</strong>
-											<div>
-												<a href="#" class="btn btn-default" role="button">Add to Cart</a><span class="pull-right"><i class="fa fa-heart-o"></i> Add to Wishlist</span></div>
-										</div>
-									</div>
-								</div>
+                                        <div class="caption">
+                                            <div class="category">[[${feature.name}]]</div>
+                                            <!--产品描述-->
+                                            <h3 class="description">[[${feature.description}]]</h3>
+                                            <!--产品价格-->
+                                            <strong>$[[${feature.price}]]</strong>
+                                            <!--添加到购物车-->
+                                            <div><a href="#" class="btn btn-default" role="button">Add to Cart</a><span class="pull-right"><i class="fa fa-heart-o"></i> Add to Wishlist</span></div>
+                                        </div>
+                                    </div>
+                                </div>
 							</div>
 						</div>
 					</div>
@@ -526,124 +310,7 @@
 				</div>
 			</div>
 		</section>	
-		
-		<!-- best selling -->
-		<section class="best-selling">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-12">
-						<h1><span class="t-color-2">Best</span> Selling
-							<small class="btn-group hidden-xs">
-								<a class=" btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" 
-								   aria-expanded="false">All Categries <i class="fa fa-bars"></i></a>
-								<ul class="dropdown-menu">
-									<li><a href="#">Option 1</a></li>
-									<li><a href="#">Option 2</a></li>
-								</ul>
-							</small>
-						</h1>
-						<div class="heading-border b-color-2"></div>
-					</div>
-				</div> <!-- section title -->
-				<div id="best-selling" class="carousel slide" data-ride="carousel">
-					<ol class="carousel-indicators">
-						<li data-target="#best-selling" data-slide-to="0" class="active"><i class="fa fa-angle-left"></i></li>
-						<li data-target="#best-selling" data-slide-to="1"><i class="fa fa-angle-right"></i></li>
-					</ol>
-					<div class="carousel-inner" role="listbox">
-						<div class="item active">
-							<div class="row">
-								<div class="col-sm-6">
-									<div class="media">
-										<div class="media-left"><img class="img-responsive" th:src="@{/frontend/images/e-add-1.jpg}" alt=""></div>
-										<div class="media-body">
-											<div class="category"> category
-												<div class="pull-right">
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star-o"></i>
-												</div>
-											</div>
-											<h3>Lorem ipsum dolor sit amet dolorem molestie</h3>
-											<strong>$899.00</strong>
-											<div>
-												<a href="#" class="btn btn-default" role="button">Add to Cart</a><span class="pull-right"><i class="fa fa-heart-o"></i> Add to Wishlist</span></div>
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-6">
-									<div class="media">
-										<div class="media-left"><img th:src="@{/frontend/images/e-add-1.jpg}" alt=""></div>
-										<div class="media-body">
-											<div class="category"> category
-												<div class="pull-right">
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star-o"></i>
-												</div>
-											</div>
-											<h3>Lorem ipsum dolor sit amet dolorem molestie</h3>
-											<strong>$899.00</strong>
-											<div>
-												<a href="#" class="btn btn-default" role="button">Add to Cart</a><span class="pull-right"><i class="fa fa-heart-o"></i> Add to Wishlist</span></div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="item">
-							<div class="row">
-								<div class="col-sm-6">
-									<div class="media">
-										<div class="media-left"><img th:src="@{/frontend/images/e-add-1.jpg}" alt=""></div>
-										<div class="media-body">
-											<div class="category"> category
-												<div class="pull-right">
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star-o"></i>
-												</div>
-											</div>
-											<h3>Lorem ipsum dolor sit amet dolorem molestie</h3>
-											<strong>$899.00</strong>
-											<div>
-												<a href="#" class="btn btn-default" role="button">Add to Cart</a><span class="pull-right"><i class="fa fa-heart-o"></i> Add to Wishlist</span></div>
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-6">
-									<div class="media">
-										<div class="media-left"><img th:src="@{/frontend/images/e-add-1.jpg}" alt=""></div>
-										<div class="media-body">
-											<div class="category"> category
-												<div class="pull-right">
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star"></i>
-													<i class="fa fa-star-o"></i>
-												</div>
-											</div>
-											<h3>Lorem ipsum dolor sit amet dolorem molestie</h3>
-											<strong>$899.00</strong>
-											<div>
-												<a href="#" class="btn btn-default" role="button">Add to Cart</a><span class="pull-right"><i class="fa fa-heart-o"></i> Add to Wishlist</span></div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>	
-		
+
 		<!-- special price -->
 		<section class="special-price">
 			<div class="price-intro">
@@ -959,79 +626,7 @@
 				</div>
 			</div>
 		</section>	
-			
-		<!-- sponsor -->
-		<section class="sponsor">
-			<div class="container">			
-				<div id="sponsor" class="carousel slide" data-ride="carousel">
-					<div class="carousel-inner" role="listbox">
-						<div class="item active">
-							<div class="row">	
-								<div class="col-sm-12">
-									<ul class="list-inline text-center">
-										<li><img class="" th:src="@{/frontend/images/1.gif}" /></li>
-										<li><img class="" th:src="@{/frontend/images/2.png}" /></li>
-										<li><img class="" th:src="@{/frontend/images/3.png}" /></li>
-										<li><img class="" th:src="@{/frontend/images/4.png}" /></li>
-										<li><img class="" th:src="@{/frontend/images/5.png}" /></li>
-										<li><img class="" th:src="@{/frontend/images/6.png}" /></li>
-										<li><img class="" th:src="@{/frontend/images/7.png}" /></li>
-										<li><img class="" th:src="@{/frontend/images/8.png}" /></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="item">
-							<div class="row">	
-								<div class="col-sm-12">
-									<ul class="list-inline text-center">
-										<li><img class="" th:src="@{/frontend/images/1.gif}" /></li>
-										<li><img class="" th:src="@{/frontend/images/2.png}" /></li>
-										<li><img class="" th:src="@{/frontend/images/3.png}" /></li>
-										<li><img class="" th:src="@{/frontend/images/4.png}" /></li>
-										<li><img class="" th:src="@{/frontend/images/5.png}" /></li>
-										<li><img class="" th:src="@{/frontend/images/6.png}" /></li>
-										<li><img class="" th:src="@{/frontend/images/7.png}" /></li>
-										<li><img class="" th:src="@{/frontend/images/8.png}" /></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- Controls -->
-				<a class="control-left" href="#sponsor" role="button" data-slide="prev"><i class="fa fa-angle-left"></i></a>
-				<a class="control-right" href="#sponsor" role="button" data-slide="next"><i class="fa fa-angle-right"></i></a>
-				</div>			
-			</div>
-		</section>	
-		
-		<!-- social icons -->
-		<section class="social-icons">
-			<div class="container">			
-				<div class="row">	
-					<div class="col-sm-12">
-						<ul class="list-inline text-center">
-							<li><a href="#" ><i class="fa fa-facebook"></i></a></li>
-							<li><a href="#" ><i class="fa fa-spotify"></i></a></li>
-							<li><a href="#" ><i class="fa fa-tumblr"></i></a></li>
-							<li><a href="#" ><i class="fa fa-share-alt"></i></a></li>
-							<li><a href="#" ><i class="fa fa-linkedin"></i></a></li>
-							<li><a href="#" ><i class="fa fa-delicious"></i></a></li>
-							<li><a href="#" ><i class="fa fa-instagram"></i></a></li>
-							<li><a href="#" ><i class="fa fa-dropbox"></i></a></li>
-							<li><a href="#" ><i class="fa fa-soundcloud"></i></a></li>
-							<li><a href="#" ><i class="fa fa-pinterest"></i></a></li>
-							<li><a href="#" ><i class="fa fa-google-plus"></i></a></li>
-							<li><a href="#" ><i class="fa fa-github-alt"></i></a></li>
-							<li><a href="#" ><i class="fa fa-skype"></i></a></li>
-							<li><a href="#" ><i class="fa fa-stumbleupon"></i></a></li>
-							<li><a href="#" ><i class="fa fa-youtube"></i></a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</section>	
-		
+
 		<footer>
 			<div class="footer-top">
 				<div class="container">			
@@ -1151,27 +746,25 @@
 					</div>
 				</div>
 			</div>
-			<div class="footer-bottom">
-				<div class="container">		
-					<div class="row">	
-						<div class="col-sm-12 text-center">
-							<p>Copyright &copy; 2016.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p>
-							<ul class="list-inline center-block">
-								<li><a href="#"><img th:src="@{/frontend/images/card-1.png}"></a></li>
-								<li><a href="#"><img th:src="@{/frontend/images/card-2.png}"></a></li>
-								<li><a href="#"><img th:src="@{/frontend/images/card-3.png}"></a></li>
-								<li><a href="#"><img th:src="@{/frontend/images/card-4.png}"></a></li>
-								<li><a href="#"><img th:src="@{/frontend/images/card-5.png}"></a></li>
-							</ul>
-						</div>
-					</div>
-				</div>	
-			</div>
 		</footer>
 			
         <!-- ALL JAVASCRIPT -->         
         <script th:src="@{/frontend/js/jquery.js}"></script>
 		<script th:src="@{/frontend/js/bootstrap.min.js}"></script>
-        <script th:src="@{/frontend/js/custom.js}"></script>
+		<script th:inline="javascript">
+			$(function () {
+                $(".description").each(function() {
+                    var maxwidth =12;//显示多少字符
+                    if ($(this).text().length > maxwidth) {
+                        $(this).text($(this).text().substring(0, maxwidth));
+                        $(this).html($(this).html() + '...');
+                    }
+                });
+
+				$('.featured-product').find('.thumbnail')
+				var f1 = [[${features2}]]
+				console.log(f1)
+            })
+		</script>
     </body>
 </html>

@@ -5,13 +5,15 @@ import org.springframework.stereotype.Service;
 import xb.mall.dao.ProductMapper;
 import xb.mall.service.ProductCollectionService;
 
+import java.util.List;
+
 @Service
 public class ProductCollectionSerivceImpl implements ProductCollectionService {
     @Autowired
     ProductMapper productMapper;
     @Override
-    public void addRelation(String productId, String collectionId) {
-        productMapper.addProductCollectionRelation(productId,collectionId);
+    public void addRelationBatch(List<String> productId, String collectionId) {
+        productMapper.addProductCollectionRelationBatch(productId,collectionId);
     }
 
     @Override

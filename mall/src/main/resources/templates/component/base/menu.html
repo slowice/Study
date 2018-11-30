@@ -28,7 +28,11 @@
                 <li id="homepage">
                     <a href="javascript:void(0)" aria-expanded="true"><i class="ti-dashboard"></i><span>首页配置</span></a>
                     <ul class="collapse">
-                        <li id="1"><a th:href="@{/manage/homepage/features}">特色产品</a></li>
+                        <li id="features"><a th:href="@{/homepage/features}">特色产品</a></li>
+                        <li id="banner"><a th:href="@{/homepage/banner}">横幅图片</a></li>
+                        <li id="middleads"><a th:href="@{/homepage/middleads}">中栏广告</a></li>
+                        <li id="contactus"><a th:href="@{/homepage/contactus}">联系我们</a></li>
+                        <li id="aboutus"><a th:href="@{/homepage/aboutus}">关于我们</a></li>
                     </ul>
                 </li>
 
@@ -45,6 +49,8 @@
 <script th:inline="javascript">
     var menuId = [[${menuId}]];
     var menuPid = [[${menuPid}]];
+    window.menuId = menuId;
+    window.menuPid = menuPid;
     window.onload = function() {
         $('#'+menuPid).find('a').trigger('click');
         $('#'+menuId).addClass('active');

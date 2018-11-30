@@ -39,6 +39,11 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
+    public List<ProductInfoReponse> getAll() {
+        return productMapper.getAll();
+    }
+
+    @Override
     public List<ProductInfo> getProductListByCollectionId(String collectionId) {
         return productMapper.getProductListByCollectionId(collectionId);
     }

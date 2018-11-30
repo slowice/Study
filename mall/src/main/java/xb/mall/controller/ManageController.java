@@ -9,7 +9,7 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 import xb.mall.bean.requestObj.ProductInfoRequest;
 import xb.mall.bean.responseObj.ProductInfoReponse;
-import xb.mall.common.FileUtils;
+import xb.mall.common.ImageUtil;
 import xb.mall.service.MenuService;
 import xb.mall.service.ProductService;
 
@@ -81,7 +81,7 @@ public class ManageController {
         MultipartFile image = request.getImage();
         if(image != null){
             String filename = request.getId()+".jpg";
-            FileUtils.storeImg(image,imgStorePath,filename);
+            ImageUtil.storeImg(image,imgStorePath,filename,230,187);
         }
         productService.saveProduct(request);
         modelAndView.setViewName("manage_product_list");

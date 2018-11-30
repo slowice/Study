@@ -12,10 +12,12 @@ import java.util.List;
 public interface ProductMapper{
     List<ProductInfoReponse> getProductInfoListByCategoryName(String categoryName);
 
+    List<ProductInfoReponse> getAll();
+
     List<ProductInfo> getProductListByCollectionId(String collectionId);
 
     ProductInfoReponse getProductInfoById(String productId);
 
-    void addProductCollectionRelation(String productId,String collectionId);
+    void addProductCollectionRelationBatch(@Param("productIdList")List<String> productIdList,@Param("collectionId") String collectionId);
     void deleteProductCollectionRelation(@Param("productId") String productId, @Param("collectionId") String collectionId);
 }

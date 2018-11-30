@@ -12,6 +12,8 @@ public interface ProductService {
 
     List<ProductInfoReponse> getProductListByCategoryName(String categoryName);
 
+    List<ProductInfoReponse> getAll();
+
     List<ProductInfo> getProductListByCollectionId(String collectionId);
 
     Page<ProductInfo> getProductInfoPaged();

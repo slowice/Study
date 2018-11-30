@@ -20,8 +20,15 @@
     <script type="text/javascript" th:src="@{/assets/jqwidgets/jqxgrid.pager.js}"></script>
     <script type="text/javascript" th:src="@{/assets/jqwidgets/jqxgrid.selection.js}"></script>
     <script type="text/javascript" th:src="@{/assets/jqwidgets/jqxgrid.edit.js}"></script>
+    <script type="text/javascript" th:src="@{/assets/ztree/jquery.ztree.all.min.js}"></script>
+    <link rel="stylesheet" th:href="@{/assets/ztree/metroStyle/metroStyle.css}" type="text/css"/>
 
     <script type="text/javascript">
+        function IsInArray(arr,val){
+            var testStr=','+arr.join(",")+",";
+            return testStr.indexOf(","+val+",")!=-1;
+        }
+
         //删除特色产品
         function del(x) {
             var productId = $(x).attr('data-set')
@@ -31,7 +38,8 @@
                 data:{productId:productId},
                 success: function (data) {
                     if(data && data.code==0){
-                        alert("success ")
+                        location.reload()
+
                     }
                 }
             })
@@ -39,23 +47,55 @@
 
         //添加特色产品
         function addFeature(){
-
-        }
-
-        //查询所有产品
-        function getAllProducts(){
+            var treeObj = $.fn.zTree.getZTreeObj("tree");
+            var nodes = treeObj.getCheckedNodes(true);
+            var productIdArr = new Array();
+            for(var i in nodes){
+               if(nodes[i].id){
+                   productIdArr.push(nodes[i].id)
+               }
+            }
+            var url = "[[@{/homepage/features/add}]]";
             $.ajax({
-                url:,
+                url:url,
+                type:"POST",
+                traditional:true,
+                data:{"productIdArr":productIdArr},
                 success:function (data) {
-                    console.log(data)
+                    if(data && data.code==0) {
+                        location.reload()
+                    }
                 }
             })
         }
 
+        function zTreeOnClick(event, treeId, treeNode) {
+            alert(treeNode.id+ ", " + treeNode.name);
+        };
+
+        var zTreeObj;
+        var setting = {
+            async: {
+                enable: true,
+                url: "[[@{/product/getAll}]]",
+            },
+
+            callback: {
+                onClick: zTreeOnClick
+            },
+
+            check: {
+                enable: true,
+                chkStyle: "checkbox"
+            }
+        };
+
+
         $(document).ready(function () {
-            //var productCategoryName = "[[${menuId}]]";
-            var url =  "[[@{/homepage/features/getAll}]]";
-            // prepare the data
+            zTreeObj = $.fn.zTree.init($("#tree"), setting);
+
+            var url =  "[[@{/product/features/getAll}]]";
+
             var source = {
                 datatype: 'json',
                 datafields: [{
@@ -82,16 +122,40 @@
                 type: 'GET',
                 async: true
             };
+
             var deleteLink = function (row, columnfield, value, defaulthtml, columnproperties, rowdata) {
-               // var link = '<a href="[[@{/homepage/features/delete?productId=}]]'+rowdata.uid+'" style="color: red">删除</a>'
                 var link = '<a href="javascript:void(0);" onclick="del(this)" data-set='+rowdata.uid+' style="color: red">删除</a>'
                 return link
             }
+
             var dataAdapter = new $.jqx.dataAdapter(source, {
+
                 downloadComplete: function (data, status, xhr) {
 
                 },
-                loadComplete: function (data) { },
+                loadComplete: function (data) {
+                    var productArr = new Array();
+
+                    for(var i in data.data){
+                        var prod = data.data[i];
+                        productArr.push(prod.id)
+                    }
+
+                    var treeObj = $.fn.zTree.getZTreeObj("tree");
+                    var nodes = treeObj.getNodes();
+                    var removeNodes = new Array();
+                    for (var i=0, l=nodes.length; i < l; i++) {
+                        var childNodes = nodes[i].children
+                        for(var j in childNodes){
+                            if(IsInArray(productArr,childNodes[j].id)){
+                                removeNodes.push(childNodes[j])
+                            }
+                        }
+                    }
+                    for(var i in removeNodes){
+                        treeObj.removeNode(removeNodes[i]);
+                    }
+                },
                 loadError: function (xhr, status, error) { }
             });
 
@@ -127,8 +191,7 @@
         <a class="btn btn-outline-secondary mb-3" data-toggle="modal" data-target="#exampleModalCenter">新增特色产品</a>
     </div>
 
-    <div id="grid">
-    </div>
+    <div id="grid"></div>
 
     <div class="modal fade" id="exampleModalCenter">
         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -138,11 +201,11 @@
                     <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
                 </div>
                 <div class="modal-body">
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius voluptates explicabo natus nobis, aperiam placeat aliquid nisi ut exercitationem dolor quisquam nam tempora voluptatem. Unde dignissimos est aliquid quidem porro dolorum ipsam suscipit animi quas, debitis ea, sunt quo distinctio doloribus eveniet dolores tempore delectus voluptatum! Possimus earum asperiores animi.</p>
+                    <ul id="tree" class="ztree"></ul>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" th:href="@{/homepage/features/add}">Save changes</button>
+                    <button type="button" class="btn btn-primary" onclick="addFeature()">Save changes</button>
                 </div>
             </div>
         </div>
