@@ -36,6 +36,9 @@
                     name: 'stock',
                     type: 'string'
                 }, {
+                    name: 'sold',
+                    type: 'string'
+                }, {
                     name: 'imgPath',
                     type: 'string'
                 }, {
@@ -88,12 +91,12 @@
 
                     selectionmode: 'multiplecellsadvanced',
                     columns: [
-                        { text: '产品名称', columngroup: 'ProductDetails', datafield: 'name', width: 250 },
-                        { text: '库存', columngroup: 'ProductDetails', datafield: 'stock', width: 250 },
-                        { text: '产品描述', columngroup: 'ProductDetails', datafield: 'description', width: 250 },
-                        { text: '链接', columngroup: 'ProductDetails', datafield: 'imgPath', cellsalign: 'right', align: 'right', width: 200 },
-                        { text: '单价', columngroup: 'ProductDetails', datafield: 'price', align: 'right', cellsalign: 'right', cellsformat: 'c2', width: 200 },
-                        // { text: '库存', datafield: 'stock', cellsalign: 'right', cellsrenderer: cellsrenderer,width: 100},
+                        { text: '产品名称', columngroup: 'ProductDetails', datafield: 'name', width: 180 },
+                        { text: '库存', columngroup: 'ProductDetails', datafield: 'stock', width: 180 },
+                        { text: '销量', columngroup: 'ProductDetails', datafield: 'sold', width: 180 },
+                        { text: '产品描述', columngroup: 'ProductDetails', datafield: 'description', width: 180 },
+                        { text: '链接', columngroup: 'ProductDetails', datafield: 'imgPath', cellsalign: 'right', align: 'right', width: 180 },
+                        { text: '单价', columngroup: 'ProductDetails', datafield: 'price', align: 'right', cellsalign: 'right', cellsformat: 'c2', width: 180 },
                         { text: '详情',   cellsrenderer: updateLink},
                         { text: '删除',  cellsalign: 'right', cellsrenderer: deleteLink}
                     ],

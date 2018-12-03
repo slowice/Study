@@ -7,14 +7,11 @@
 		<link th:href="@{/frontend/css/font-awesome.min.css}" rel="stylesheet">
 		<link th:href="@{/frontend/css/style.css}" rel="stylesheet">
 		<link th:href="@{/frontend/css/responsive.css}" rel="stylesheet">
-		<!--link href="css/blog-single.css" rel="stylesheet">
-		<link href="css/responsive.css" rel="stylesheet"-->
-    </head>   
+    </head>
 	<body>
 		
 		<!-- header -->
 		<header class="header">
-
 			<!-- logo and adds -->
 			<div class="logo-add">
 				<div class="container">
@@ -74,118 +71,8 @@
 		<section class="home">
 			<div class="intro">
 				<div id="home" class="carousel slide" data-ride="carousel">
-					<ol class="carousel-indicators">
-						<li data-target="#home" data-slide-to="0" class="active"></li>
-						<li data-target="#home" data-slide-to="1"></li>
-						<li data-target="#home" data-slide-to="2"></li>
-						<li data-target="#home" data-slide-to="3"></li>
-						<li data-target="#home" data-slide-to="4"></li>
-						<li data-target="#home" data-slide-to="5"></li>
-					</ol>
-					<div class="carousel-inner" role="listbox">
-						<div class="item active">
-							<div class="container">
-								<div class="row">
-									<div class="col-sm-7">
-										<div class="intro-content">
-											<h1>Last Chance</h1>
-											<h2>Biggest <span class="highlight">Sale</span></h2>
-											<p>Nam apeirian assentior ei, utquo eros posse verterem. Cum eu error congue saperet. Teer eam exerci vputate consetetur.</p>
-											<a class="btn btn-default">Shop Now</a>
-										</div>
-									</div>
-									<div class="col-sm-5">
-										<img class="img-responsive" th:src="@{/frontend/images/person.png}" height="742" alt="" />
-									</div>	
-								</div>	
-							</div>	
-						</div>
-						<div class="item">
-							<div class="container">
-								<div class="row">
-									<div class="col-sm-7">
-										<div class="intro-content">
-											<h1>Last Chance</h1>
-											<h2>Biggest <span class="highlight">Sale</span></h2>
-											<p>Nam apeirian assentior ei, utquo eros posse verterem. Cum eu error congue saperet. Teer eam exerci vputate consetetur.</p>
-											<a class="btn btn-default">Shop Now</a>
-										</div>
-									</div>
-									<div class="col-sm-5">
-										<img class="img-responsive" th:src="@{/frontend/images/option.png}" alt="" />
-									</div>	
-								</div>	
-							</div>	
-						</div>
-						<div class="item">
-							<div class="container">
-								<div class="row">
-									<div class="col-sm-7">
-										<div class="intro-content">
-											<h1>Last Chance</h1>
-											<h2>Biggest <span class="highlight">Sale</span></h2>
-											<p>Nam apeirian assentior ei, utquo eros posse verterem. Cum eu error congue saperet. Teer eam exerci vputate consetetur.</p>
-											<a class="btn btn-default">Shop Now</a>
-										</div>
-									</div>
-									<div class="col-sm-5">
-										<img class="img-responsive" th:src="@{/frontend/images/option.png}" alt="" />
-									</div>	
-								</div>	
-							</div>	
-						</div>
-						<div class="item">
-							<div class="container">
-								<div class="row">
-									<div class="col-sm-7">
-										<div class="intro-content">
-											<h1>Last Chance</h1>
-											<h2>Biggest <span class="highlight">Sale</span></h2>
-											<p>Nam apeirian assentior ei, utquo eros posse verterem. Cum eu error congue saperet. Teer eam exerci vputate consetetur.</p>
-											<a class="btn btn-default">Shop Now</a>
-										</div>
-									</div>
-									<div class="col-sm-5">
-										<img class="img-responsive" th:src="@{/frontend/images/person.png}" alt="" />
-									</div>	
-								</div>	
-							</div>	
-						</div>
-						<div class="item">
-							<div class="container">
-								<div class="row">
-									<div class="col-sm-7">
-										<div class="intro-content">
-											<h1>Last Chance</h1>
-											<h2>Biggest <span class="highlight">Sale</span></h2>
-											<p>Nam apeirian assentior ei, utquo eros posse verterem. Cum eu error congue saperet. Teer eam exerci vputate consetetur.</p>
-											<a class="btn btn-default">Shop Now</a>
-										</div>
-									</div>
-									<div class="col-sm-5">
-										<img class="img-responsive" th:src="@{/frontend/images/option.png}" alt="" />
-									</div>	
-								</div>	
-							</div>	
-						</div>
-						<div class="item">
-							<div class="container">
-								<div class="row">
-									<div class="col-sm-7">
-										<div class="intro-content">
-											<h1>Last Chance</h1>
-											<h2>Biggest <span class="highlight">Sale</span></h2>
-											<p>Nam apeirian assentior ei, utquo eros posse verterem. Cum eu error congue saperet. Teer eam exerci vputate consetetur.</p>
-											<a class="btn btn-default">Shop Now</a>
-										</div>
-									</div>
-									<div class="col-sm-5">
-										<img class="img-responsive" th:src="@{/frontend/images/person.png}" alt="" />
-									</div>	
-								</div>	
-							</div>	
-						</div>
-					</div>
+					<ol id="banner-indicators" class="carousel-indicators"></ol>
+					<div id="banner-item" class="carousel-inner" role="listbox"></div>
 					<!-- Controls -->
 					<a class="left carousel-control" href="#home" role="button" data-slide="prev">
 						<i class="fa fa-angle-left"></i>
@@ -203,17 +90,7 @@
 				<div class="row">
 					<div class="col-sm-12">
 						<div class="">
-							<h1><span class="t-color-1">特色</span> 产品
-								<!--暂时不添加类型过滤-->
-								<!--<small class="btn-group hidden-xs">-->
-									<!--<a class=" btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" -->
-									   <!--aria-expanded="false">All Categries <i class="fa fa-bars"></i></a>-->
-									<!--<ul class="dropdown-menu">-->
-										<!--<li><a href="#">Option 1</a></li>-->
-										<!--<li><a href="#">Option 2</a></li>-->
-									<!--</ul>-->
-								<!--</small>-->
-							</h1>
+							<h1><span class="t-color-1">特色</span> 产品</h1>
 							<div class="heading-border b-color-1"></div>
 						</div>
 					</div>
@@ -282,30 +159,16 @@
 			</div>
 		</section>		
 		
-		<!-- emarket adds -->
+		<!-- middle ads -->
 		<section class="emarket-adds">
 			<div class="container">
 				<div class="row">
-					<div class="col-sm-4">
-						<div class="single-add">
-							<h4>Get <span>50%</span> Discount</h4>
-							<a href="#" class="btn btn-default" role="button">Learn More</a>
-							<span class="img-add"><img th:src="@{/frontend/images/red-tablet.png}" alt="" /></span>
-						</div>
-					</div>
-					<div class="col-sm-4">
-						<div class="single-add">
-							<h4>Best <span>Offer</span> for You</h4>
-							<a href="#" class="btn btn-default" role="button">Learn More</a>
-							<span class="img-add"><img th:src="@{/frontend/images/red-tablet.png}" alt="" /></span>
-						</div>
-					</div>
-					<div class="col-sm-4">
-						<div class="single-add">
-							<h4><span>Only</span> Best smartphone</h4>
-							<a href="#" class="btn btn-default" role="button">Learn More</a>
-							<span class="img-add"><img th:src="@{/frontend/images/red-tablet.png}" alt="" /></span>
-						</div>
+					<div class="col-sm-4" th:each="middleAds: ${middleAdsList}">
+						<!--<div class="single-add">-->
+							<!--<h4>Get <span>50%</span> Discount</h4>-->
+							<!--<a href="#" class="btn btn-default" role="button">Learn More</a>-->
+							<img class="img-responsive img-thumbnail" th:src="'data:image/jpeg;base64,'+${middleAds.imgStr}"/>
+						<!--</div>-->
 					</div>
 				</div>
 			</div>
@@ -338,15 +201,16 @@
 			<div class="container">
 				<div class="row">	
 					<div class="col-sm-4">
-						<h1><span class="t-color-3">New</span> Arrival</h1>
+						<h1><span class="t-color-3">汽配</span></h1>
 						<div class="heading-border b-color-3"></div>
 						<ul class="media-list">
-							<li class="media">
-								<div class="media-left text-center"><img th:src="@{/frontend/images/product-1.jpg}" alt="">
+							<li class="media" th:each="autoPart:${autoParts}">
+								<div class="media-left text-center" >
+									<img class="" th:src="@{'/product/preview?productId='+${autoPart.id}}" width="122px;" alt="">
 									<a href="#"><i class="fa fa-eye"></i></a>
 								</div>
 								<div class="media-body">
-							    <h3 class="media-heading">Lorem ipsum dolor sit amet</h3>
+							    <h3 class="media-heading">[[${autoPart.name}]]</h3>
 									<div class="category">
 										<i class="fa fa-star"></i>
 										<i class="fa fa-star"></i>
@@ -354,53 +218,23 @@
 										<i class="fa fa-star"></i>
 										<i class="fa fa-star-o"></i>
 									</div>
-									<strong>$899.99</strong>
+									<strong>$[[${autoPart.price}]]</strong>
 								</div>
 							</li>
-							<li class="media">
-								<div class="media-left text-center"><img th:src="@{/frontend/images/product-1.jpg}" alt="">
-									<a href="#"><i class="fa fa-eye"></i></a>
-								</div>
-								<div class="media-body">
-							    <h3 class="media-heading">Lorem ipsum dolor sit amet</h3>
-									<div class="category">
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star-o"></i>
-									</div>
-									<strong>$899.99</strong>
-								</div>
-							</li>
-							<li class="media">
-								<div class="media-left text-center"><img th:src="@{/frontend/images/product-1.jpg}" alt="">
-									<a href="#"><i class="fa fa-eye"></i></a>
-								</div>
-								<div class="media-body">
-							    <h3 class="media-heading">Lorem ipsum dolor sit amet</h3>
-									<div class="category">
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star-o"></i>
-									</div>
-									<strong>$899.99</strong>
-								</div>
-							</li>
+
 						</ul>
 					</div>
 					<div class="col-sm-4">
-						<h1><span class="t-color-4">Special</span> Product</h1>
+						<h1><span class="t-color-4">蓝牙音箱</span></h1>
 						<div class="heading-border b-color-4"></div>
 						<ul class="media-list">
-							<li class="media">
-								<div class="media-left text-center"><img th:src="@{/frontend/images/product-1.jpg}" alt="">
+							<li class="media" th:each="speaker:${blueSpeaker}">
+								<div class="media-left text-center" >
+									<img class="" th:src="@{'/product/preview?productId='+${speaker.id}}" width="122px;" alt="">
 									<a href="#"><i class="fa fa-eye"></i></a>
 								</div>
 								<div class="media-body">
-							    <h3 class="media-heading">Lorem ipsum dolor sit amet</h3>
+									<h3 class="media-heading">[[${speaker.name}]]</h3>
 									<div class="category">
 										<i class="fa fa-star"></i>
 										<i class="fa fa-star"></i>
@@ -408,53 +242,23 @@
 										<i class="fa fa-star"></i>
 										<i class="fa fa-star-o"></i>
 									</div>
-									<strong>$899.99</strong>
+									<strong>$[[${speaker.price}]]</strong>
 								</div>
 							</li>
-							<li class="media">
-								<div class="media-left text-center"><img th:src="@{/frontend/images/product-1.jpg}" alt="">
-									<a href="#"><i class="fa fa-eye"></i></a>
-								</div>
-								<div class="media-body">
-							    <h3 class="media-heading">Lorem ipsum dolor sit amet</h3>
-									<div class="category">
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star-o"></i>
-									</div>
-									<strong>$899.99</strong>
-								</div>
-							</li>
-							<li class="media">
-								<div class="media-left text-center"><img th:src="@{/frontend/images/product-1.jpg}" alt="">
-									<a href="#"><i class="fa fa-eye"></i></a>
-								</div>
-								<div class="media-body">
-							    <h3 class="media-heading">Lorem ipsum dolor sit amet</h3>
-									<div class="category">
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star-o"></i>
-									</div>
-									<strong>$899.99</strong>
-								</div>
-							</li>
+
 						</ul>
 					</div>	
 					<div class="col-sm-4">
-						<h1><span class="t-color-5">Top</span> Rated</h1>
+						<h1><span class="t-color-5">儿童玩具</span></h1>
 						<div class="heading-border b-color-5"></div>
 						<ul class="media-list">
-							<li class="media">
-								<div class="media-left text-center"><img th:src="@{/frontend/images/product-1.jpg}" alt="">
+							<li class="media" th:each="singletoy:${toy}">
+								<div class="media-left text-center" >
+									<img class="" th:src="@{'/product/preview?productId='+${singletoy.id}}" width="122px;" alt="">
 									<a href="#"><i class="fa fa-eye"></i></a>
 								</div>
 								<div class="media-body">
-							    <h3 class="media-heading">Lorem ipsum dolor sit amet</h3>
+									<h3 class="media-heading">[[${singletoy.name}]]</h3>
 									<div class="category">
 										<i class="fa fa-star"></i>
 										<i class="fa fa-star"></i>
@@ -462,167 +266,12 @@
 										<i class="fa fa-star"></i>
 										<i class="fa fa-star-o"></i>
 									</div>
-									<strong>$899.99</strong>
+									<strong>$[[${singletoy.price}]]</strong>
 								</div>
 							</li>
-							<li class="media">
-								<div class="media-left text-center"><img th:src="@{/frontend/images/product-1.jpg}" alt="">
-									<a href="#"><i class="fa fa-eye"></i></a>
-								</div>
-								<div class="media-body">
-							    <h3 class="media-heading">Lorem ipsum dolor sit amet</h3>
-									<div class="category">
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star-o"></i>
-									</div>
-									<strong>$899.99</strong>
-								</div>
-							</li>
-							<li class="media">
-								<div class="media-left text-center"><img th:src="@{/frontend/images/product-1.jpg}" alt="">
-									<a href="#"><i class="fa fa-eye"></i></a>
-								</div>
-								<div class="media-body">
-							    <h3 class="media-heading">Lorem ipsum dolor sit amet</h3>
-									<div class="category">
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star-o"></i>
-									</div>
-									<strong>$899.99</strong>
-								</div>
-							</li>
+
 						</ul>
 					</div>	
-				</div>
-			</div>
-		</section>	
-		
-		<!-- Recent Post -->
-		<section class="recent-post">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-12">
-						<h1><span class="t-color-6">Recent</span> Post</h1>
-						<div class="heading-border b-color-6"></div>
-					</div>
-				</div> <!-- section title -->
-				<div id="recent-post" class="carousel slide" data-ride="carousel">
-					<ol class="carousel-indicators">
-						<li data-target="#recent-post" data-slide-to="0" class="active"><i class="fa fa-angle-left"></i></li>
-						<li data-target="#recent-post" data-slide-to="1"><i class="fa fa-angle-right"></i></li>
-					</ol>
-					<div class="carousel-inner" role="listbox">
-						<div class="item active">
-							<div class="row">	
-								<div class="col-sm-3">
-									<div class="thumbnail">
-										<img class="img-responsive" th:src="@{/frontend/images/e-add-1.jpg}" alt="">
-										<div class="text-center"><i class="fa fa-search"></i></div>
-										<div class="caption">
-											<h3 class="media-heading">Lorem ipsum dolor sit amet dolorem molestie</h3>
-											<span><a href="#"> 5 July 2014</a><a href="#"><i class="fa fa-user"></i> Arif</a></span>
-											<p>Nam apeirian assentior ei, utquo eros posse verterem. Cum eu error congue saperet treer eam exerci 												utquo eros posse verterem error.</p>
-											<span class="comment"><i class="fa fa-comments"></i> 5 comments</span>	
-										</div>
-									</div>
-							  </div>
-								<div class="col-sm-3">
-									<div class="thumbnail">
-										<img class="img-responsive" th:src="@{/frontend/images/e-add-1.jpg}" alt="">
-										<div class="text-center"><i class="fa fa-search"></i></div>
-										<div class="caption">
-											<h3 class="media-heading">Lorem ipsum dolor sit amet dolorem molestie</h3>
-											<span><a href="#"> 5 July 2014</a><a href="#"><i class="fa fa-user"></i> Arif</a></span>
-											<p>Nam apeirian assentior ei, utquo eros posse verterem. Cum eu error congue saperet treer eam exerci 												utquo eros posse verterem error.</p>
-											<span class="comment"><i class="fa fa-comments"></i> 5 comments</span>	
-										</div>
-									</div>
-							  </div>
-								<div class="col-sm-3">
-									<div class="thumbnail">
-										<img class="img-responsive" th:src="@{/frontend/images/e-add-1.jpg}" alt="">
-										<div class="text-center"><i class="fa fa-search"></i></div>
-										<div class="caption">
-											<h3 class="media-heading">Lorem ipsum dolor sit amet dolorem molestie</h3>
-											<span><a href="#"> 5 July 2014</a><a href="#"><i class="fa fa-user"></i> Arif</a></span>
-											<p>Nam apeirian assentior ei, utquo eros posse verterem. Cum eu error congue saperet treer eam exerci 												utquo eros posse verterem error.</p>
-											<span class="comment"><i class="fa fa-comments"></i> 5 comments</span>	
-										</div>
-									</div>
-							  </div>
-								<div class="col-sm-3">
-									<div class="thumbnail">
-										<img class="img-responsive" th:src="@{/frontend/images/e-add-1.jpg}" alt="">
-										<div class="text-center"><i class="fa fa-search"></i></div>
-										<div class="caption">
-											<h3 class="media-heading">Lorem ipsum dolor sit amet dolorem molestie</h3>
-											<span><a href="#"> 5 July 2014</a><a href="#"><i class="fa fa-user"></i> Arif</a></span>
-											<p>Nam apeirian assentior ei, utquo eros posse verterem. Cum eu error congue saperet treer eam exerci 												utquo eros posse verterem error.</p>
-											<span class="comment"><i class="fa fa-comments"></i> 5 comments</span>	
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="item">
-							<div class="row">	
-								<div class="col-sm-3">
-									<div class="thumbnail">
-										<img class="img-responsive" th:src="@{/frontend/images/e-add-1.jpg}" alt="">
-										<div class="text-center"><i class="fa fa-search"></i></div>
-										<div class="caption">
-											<h3 class="media-heading">Lorem ipsum dolor sit amet dolorem molestie</h3>
-											<span><a href="#"> 5 July 2014</a><a href="#"><i class="fa fa-user"></i> Arif</a></span>
-											<p>Nam apeirian assentior ei, utquo eros posse verterem. Cum eu error congue saperet treer eam exerci 												utquo eros posse verterem error.</p>
-											<span class="comment"><i class="fa fa-comments"></i> 5 comments</span>	
-										</div>
-									</div>
-							  </div>
-								<div class="col-sm-3">
-									<div class="thumbnail">
-										<img class="img-responsive" th:src="@{/frontend/images/e-add-1.jpg}" alt="">
-										<div class="text-center"><i class="fa fa-search"></i></div>
-										<div class="caption">
-											<h3 class="media-heading">Lorem ipsum dolor sit amet dolorem molestie</h3>
-											<span><a href="#"> 5 July 2014</a><a href="#"><i class="fa fa-user"></i> Arif</a></span>
-											<p>Nam apeirian assentior ei, utquo eros posse verterem. Cum eu error congue saperet treer eam exerci 												utquo eros posse verterem error.</p>
-											<span class="comment"><i class="fa fa-comments"></i> 5 comments</span>	
-										</div>
-									</div>
-							  </div>
-								<div class="col-sm-3">
-									<div class="thumbnail">
-										<img class="img-responsive" th:src="@{/frontend/images/e-add-1.jpg}" alt="">
-										<div class="text-center"><i class="fa fa-search"></i></div>
-										<div class="caption">
-											<h3 class="media-heading">Lorem ipsum dolor sit amet dolorem molestie</h3>
-											<span><a href="#"> 5 July 2014</a><a href="#"><i class="fa fa-user"></i> Arif</a></span>
-											<p>Nam apeirian assentior ei, utquo eros posse verterem. Cum eu error congue saperet treer eam exerci 												utquo eros posse verterem error.</p>
-											<span class="comment"><i class="fa fa-comments"></i> 5 comments</span>	
-										</div>
-									</div>
-							  </div>
-								<div class="col-sm-3">
-									<div class="thumbnail">
-										<img class="img-responsive" th:src="@{/frontend/images/e-add-1.jpg}" alt="">
-										<div class="text-center"><i class="fa fa-search"></i></div>
-										<div class="caption">
-											<h3 class="media-heading">Lorem ipsum dolor sit amet dolorem molestie</h3>
-											<span><a href="#"> 5 July 2014</a><a href="#"><i class="fa fa-user"></i> Arif</a></span>
-											<p>Nam apeirian assentior ei, utquo eros posse verterem. Cum eu error congue saperet treer eam exerci 												utquo eros posse verterem error.</p>
-											<span class="comment"><i class="fa fa-comments"></i> 5 comments</span>	
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
 				</div>
 			</div>
 		</section>	
@@ -631,7 +280,7 @@
 			<div class="footer-top">
 				<div class="container">			
 					<div class="row">	
-						<div class="col-sm-3">
+						<div class="col-sm-6">
 							<h2>About E-Market</h2>
 							<div class="heading-border b-color-1"></div>
 							<p>Nam apeirian assentior ei, utquo eros posse verterem. Cum eu error congue saperet. Te eam exerci vulputate consetetur, 								causae consulatu eaper,  apeirian assentior ei, utquo eros posse verterem. Cum eu error congue saperet. Te eam exerci 								vulputate consetetur, causae consulatu eaper</p>
@@ -645,91 +294,7 @@
 							</form>
 							<small>Eros posse verterem congue saperet.</small>
 						</div>
-						<div class="col-sm-3">
-							<h2>Featured Products</h2>
-							<div class="heading-border b-color-1"></div>
-							<ul class="media-list">
-								<li class="media">
-									<div class="media-left"><img th:src="@{/frontend/images/featured-1.jpg}" alt=""></div>
-									<div class="media-body">
-										<p class="media-heading">Lorem ipsum dolor sit amet</p>
-										<div class="category">
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i> 
-											<i class="fa fa-star"></i> 
-											<i class="fa fa-star"></i> 
-											<i class="fa fa-star-o"></i>
-										</div>
-										<strong>$899.99</strong>
-									</div>
-								</li>
-								<li class="media">
-									<div class="media-left"><img th:src="@{/frontend/images/featured-1.jpg}" alt=""></div>
-									<div class="media-body">
-										<p class="media-heading">Lorem ipsum dolor sit amet</p>
-										<div class="category">
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i> 
-											<i class="fa fa-star"></i> 
-											<i class="fa fa-star"></i> 
-											<i class="fa fa-star-o"></i>
-										</div>
-										<strong>$899.99</strong>
-									</div>
-								</li>
-								<li class="media">
-									<div class="media-left"><img th:src="@{/frontend/images/featured-1.jpg}" alt=""></div>
-									<div class="media-body">
-										<p class="media-heading">Lorem ipsum dolor sit amet</p>
-										<div class="category">
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i> 
-											<i class="fa fa-star"></i> 
-											<i class="fa fa-star"></i> 
-											<i class="fa fa-star-o"></i>
-										</div>
-										<strong>$899.99</strong>
-									</div>
-								</li>
-							</ul>
-						</div>
-						<div class="col-sm-3">
-							<h2>Latest News</h2>
-							<div class="heading-border b-color-1"></div>
-							<ul class="media-list">
-								<li class="media">
-									<div class="media-left text-center">
-										<img th:src="@{/frontend/images/featured-1.jpg}" alt="">
-										<span><i class="fa fa-search"></i></span>
-									</div>
-									<div class="media-body">
-										<p class="f-border">Lorem ipsum dolor sit amet, an animal feugait</p>
-										<p class="f-date">23 August 2015</p>
-									</div>
-								</li>
-								<li class="media">
-									<div class="media-left text-center">
-										<img th:src="@{/frontend/images/featured-1.jpg}" alt="">
-										<span><i class="fa fa-search"></i></span>
-									</div>
-									<div class="media-body">
-										<p class="f-border">Lorem ipsum dolor sit amet, an animal feugait</p>
-										<p class="f-date">23 August 2015</p>
-									</div>
-								</li>
-								<li class="media">
-									<div class="media-left text-center">
-										<img th:src="@{/frontend/images/featured-1.jpg}" alt="">
-										<span><i class="fa fa-search"></i></span>
-									</div>
-									<div class="media-body">
-										<p class="f-border">Lorem ipsum dolor sit amet, an animal feugait</p>
-										<p class="f-date">23 August 2015</p>
-									</div>
-								</li>
-							</ul>
-						</div>
-						<div class="col-sm-3">
+						<div class="col-sm-6">
 							<h2>Contact us</h2>
 							<div class="heading-border b-color-1"></div>
 							<strong class="media-heading">Address</strong>
@@ -751,8 +316,54 @@
         <!-- ALL JAVASCRIPT -->         
         <script th:src="@{/frontend/js/jquery.js}"></script>
 		<script th:src="@{/frontend/js/bootstrap.min.js}"></script>
-		<script th:inline="javascript">
+		<script type="text/javascript">
+			function initBanner(){
+			    $.ajax({
+					url:'[[@{/homepage/banner/img/preview}]]',
+					success:function (data) {
+                        for(var i in data.data){
+                            var index = data.data[i].index
+                            var imgStr = data.data[i].imgStr
+                            var indicatorLi
+                            var carouselItem
+                            if(index==0){
+                                 // carouselItem = '<div class="item active"><div class="container"><div class="row"><div class="col-sm-7"><div class="intro-content"><h1>Last Chance</h1><h2>Biggest <span class="highlight">Sale</span></h2><p>Nam apeirian assentior ei, utquo eros posse verterem. Cum eu error congue saperet. Teer eam exerci vputate consetetur.</p>a class="btn btn-default">Shop Now</a></div></div><div class="col-sm-5">' +
+                                 //    '<img class="img-responsive" src="data:image/jpeg;base64,'+imgStr+'" height="742" alt="" />' +
+                                 //    '</div></div></div></div>'
+                                carouselItem = ' <div class="item active"><img class="d-block w-100" src="data:image/jpeg;base64,'+imgStr+'"/></div>'
+
+
+                                indicatorLi =  '<li data-target="#home" data-slide-to="'+index+'" class="active"></li>'
+                            }else {
+                                indicatorLi =  '<li data-target="#home" data-slide-to="'+index+'"></li>'
+
+                                // carouselItem = '<div class="item"><div class="container"><div class="row"><div class="col-sm-5">' +
+                                //     '<img class="img-responsive" src="data:image/jpeg;base64,'+imgStr+'" alt="" />' +
+                                //     '</div></div></div></div>'
+                                carouselItem = ' <div class="item"><img class="d-block w-100" src="data:image/jpeg;base64,'+imgStr+'"/></div>'
+
+                            }
+                            $('#banner-indicators').append(indicatorLi)
+                            $('#banner-item').append(carouselItem)
+                        }
+                    }
+				})
+
+
+			}
+
+			function initProductCategory(){
+
+			}
+
 			$(function () {
+
+			    console.log('[[${toy}]]')
+			    console.log('[[${autoParts}]]')
+			    console.log('123')
+                initBanner()
+
+			    //文字转...
                 $(".description").each(function() {
                     var maxwidth =12;//显示多少字符
                     if ($(this).text().length > maxwidth) {
@@ -761,9 +372,6 @@
                     }
                 });
 
-				$('.featured-product').find('.thumbnail')
-				var f1 = [[${features2}]]
-				console.log(f1)
             })
 		</script>
     </body>

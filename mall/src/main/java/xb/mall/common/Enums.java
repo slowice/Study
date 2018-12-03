@@ -9,6 +9,9 @@ public enum Enums {
     TOY("de1e1638e89b11e8847c83fe7038c841","toy"),
 
     FEATUREPRODUCT("cac6f1d8ef0111e89b6a36e2cc59559f","feature"),
+
+    BANNER("","banner"),
+    MIDDLEADS("","middleAds"),
     ;
 
     private String code;

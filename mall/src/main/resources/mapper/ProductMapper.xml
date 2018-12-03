@@ -7,24 +7,28 @@
     select info.id as id,
            info.name as name,
            info.stock as stock,
+           info.sold as sold,
            info.img_path as imgPath,
            info.price as price,
            info.description as description,
            category.category_name as categoryName,
            category.id as categoryId
     from product_info info,product_category category where info.category_id=category.id and category.category_name = #{categorytName,jdbcType=VARCHAR}
+    order by info.sold desc
   </select>
 
     <select id="getAll" resultType="xb.mall.bean.responseObj.ProductInfoReponse">
         select info.id as id,
                info.name as name,
                info.stock as stock,
+               info.sold as sold,
                info.img_path as imgPath,
                info.price as price,
                info.description as description,
                category.category_name as categoryName,
                category.id as categoryId
         from product_info info,product_category category where info.category_id=category.id
+        order by info.sold desc
     </select>
 
     <!--通过产品集合查询所有产品-->
@@ -32,6 +36,7 @@
         select info.id as id,
                info.name as name,
                info.stock as stock,
+               info.sold as sold,
                info.img_path as imgPath,
                info.price as price,
                info.description as description
@@ -46,6 +51,7 @@
         info.id as id,
         info.name as name,
         info.stock as stock,
+        info.sold as sold,
         info.img_path as imgPath,
         info.price as price,
         info.description as description,

@@ -9,6 +9,7 @@ public class ProductInfoReponse {
     private String id;
     private String name;
     private Integer stock;
+    private Integer sold;
     private String imgPath;
     private BigDecimal price;
     private String description;

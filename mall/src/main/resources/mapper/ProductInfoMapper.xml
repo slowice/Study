@@ -5,6 +5,7 @@
     <id column="id" jdbcType="CHAR" property="id" />
     <result column="name" jdbcType="VARCHAR" property="name" />
     <result column="stock" jdbcType="INTEGER" property="stock" />
+    <result column="sold" jdbcType="INTEGER" property="stock" />
     <result column="img_path" jdbcType="VARCHAR" property="imgPath" />
     <result column="price" jdbcType="DECIMAL" property="price" />
     <result column="description" jdbcType="VARCHAR" property="description" />
@@ -15,10 +16,10 @@
     where id = #{id,jdbcType=CHAR}
   </delete>
   <insert id="insert" parameterType="xb.mall.bean.ProductInfo">
-    insert into product_info (id, name, stock, 
+    insert into product_info (id, name, stock, sold,
       img_path, price, description, 
       category_id)
-    values (#{id,jdbcType=CHAR}, #{name,jdbcType=VARCHAR}, #{stock,jdbcType=INTEGER}, 
+    values (#{id,jdbcType=CHAR}, #{name,jdbcType=VARCHAR}, #{stock,jdbcType=INTEGER}, #{sold,jdbcType=INTEGER},
       #{imgPath,jdbcType=VARCHAR}, #{price,jdbcType=DECIMAL}, #{description,jdbcType=VARCHAR}, 
       #{categoryId,jdbcType=CHAR})
   </insert>
@@ -26,6 +27,7 @@
     update product_info
     set name = #{name,jdbcType=VARCHAR},
       stock = #{stock,jdbcType=INTEGER},
+      sold = #{sold,jdbcType=INTEGER},
       img_path = #{imgPath,jdbcType=VARCHAR},
       price = #{price,jdbcType=DECIMAL},
       description = #{description,jdbcType=VARCHAR},
@@ -33,12 +35,12 @@
     where id = #{id,jdbcType=CHAR}
   </update>
   <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
-    select id, name, stock, img_path, price, description, category_id
+    select id, name, stock,sold, img_path, price, description, category_id
     from product_info
     where id = #{id,jdbcType=CHAR}
   </select>
   <select id="selectAll" resultMap="BaseResultMap">
-    select id, name, stock, img_path, price, description, category_id
+    select id, name, stock,sold, img_path, price, description, category_id
     from product_info
   </select>
 </mapper>

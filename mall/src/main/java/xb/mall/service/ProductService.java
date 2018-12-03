@@ -20,9 +20,6 @@ public interface ProductService {
 
     ProductInfoReponse getProductAndCategoryById(String productId);
 
-
-
-
     ProductInfo getProductInfoById(String productId);
 
     void saveProduct(ProductInfoRequest request);

@@ -1,6 +1,5 @@
 package xb.mall.controller;
 
-import org.apache.tomcat.util.codec.binary.Base64;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
@@ -13,13 +12,11 @@ import xb.mall.common.FileUtil;
 import xb.mall.common.ImageUtil;
 import xb.mall.common.vo.ResultVO;
 import xb.mall.common.vo.ResultVOUtil;
+import xb.mall.service.ImageService;
 import xb.mall.service.ProductCollectionService;
 import xb.mall.service.ProductService;
 
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.*;
 
 @Controller
@@ -32,6 +29,9 @@ public class HomePageController {
 
     @Autowired
     private ProductCollectionService productCollectionService;
+
+    @Autowired
+    private ImageService imageService;
 
     @Value("${web.upload-path}")
     private String imgStorePath;
@@ -109,29 +109,7 @@ public class HomePageController {
     @GetMapping("/{menuId}/img/preview")
     @ResponseBody
     public ResultVO imgPreview(@PathVariable String menuId) throws Exception {
-        List<IndexImage> indexImageList = new LinkedList<>();
-        String filePath = imgStorePath + menuId + "/";
-        List<File> fileList = ImageUtil.getFiles(filePath);
-        InputStream inputStream=null;
-        try {
-            for (int i =0;i<fileList.size();i++) {
-                inputStream = new FileInputStream(fileList.get(i));
-                int count = 0;
-                while (count == 0) {
-                    count = inputStream.available();
-                }
-                byte[] data = new byte[count];
-                inputStream.read(data);
-                String base64 = new String(Base64.encodeBase64(data));
-                IndexImage indexImage = new IndexImage();
-                indexImage.setIndex(i);
-                indexImage.setImgStr(base64);
-                indexImageList.add(indexImage);
-            }
-        }catch (Exception e){
-        }finally {
-            inputStream.close();
-        }
+        List<IndexImage> indexImageList = imageService.getIndexImageByMenuId(menuId);
         return ResultVOUtil.success(indexImageList);
     }
 }
